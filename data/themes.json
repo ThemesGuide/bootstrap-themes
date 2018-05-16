@@ -1,0 +1,268 @@
+[
+	{
+	"name": "Signal",
+	"fonts": {
+	    "headings":"Comfortaa",
+	    "base":"Nunito"
+	},
+	"desc": "Like sailing yacht flags in a busy harbor.",
+	"vars": {
+	    "gray-300": "#e0e0e0"
+	},
+	"colors": {
+		"primary": "#FF304F",
+		"secondary": "#CACACA",
+		"success": "#015668",
+		"danger": "#06648C",
+		"info": "#0F81C7",
+		"warning": "#0DE2EA",
+		"light": "#ececec",
+		"dark": "#222222"
+	}},
+	{
+      "name": "Greyson",
+      "fonts": {
+	    "headings":"Oswald",
+	    "base":"Muli"
+	  },
+      "desc": "Shades of gray featuring sea green.",
+      "colors": {
+        "primary": "#2f3c48",
+        "secondary": "#6f7f8c",
+        "success": "#3e4d59",
+        "danger": "#cc330d",
+        "info": "#5c8f94",
+        "warning": "#6e9fa5",
+        "light": "#eceeec",
+        "dark": "#1e2b37"
+    }},
+    {
+	"name": "Fresca",
+	"desc": "Like a sunny summer day in Northern Italy.",
+	"fonts": {
+	    "headings":"Muli"
+	},
+	"colors": {
+		"primary": "#07689F",
+		"secondary": "#C9D6DF",
+		"success": "#11D3BC",
+		"danger": "#F67280",
+		"info": "#A2D5F2",
+		"warning": "#FF7E67",
+		"light": "#FAFAFA",
+		"dark": "#4e4e4e"
+	}},
+	{
+	"name": "Darkster",
+	"desc": "A dark background theme with bold contrasting colors.",
+	"fonts": {
+	    "headings":"Comfortaa"
+	},
+	"vars": {
+        "gray-300": "#000000",
+        "$gray-800": "#4a535b",
+        "body-bg": "$gray-800",
+        "body-color": "#aaa",
+        "link-color": "$white",
+        "font-size-base": "1.1rem",
+        "table-accent-bg": " rgba($white,.05)",
+        "table-hover-bg": "rgba($white,.075)",
+        "table-border-color": "rgba(red,.6)",
+        "table-dark-border-color": " $table-border-color",
+        "table-dark-color": "$white",
+        "input-disabled-bg": " #ccc",
+        "dropdown-bg": "$gray-800",
+        "dropdown-divider-bg": "rgba($black,.15)",
+        "dropdown-link-color": "$body-color",
+        "dropdown-link-hover-color": "$white",
+        "dropdown-link-hover-bg": "$body-bg",
+        "nav-tabs-border-color": "rgba($black, 0.6)",
+        "nav-tabs-link-hover-border-color": "$nav-tabs-border-color",
+        "nav-tabs-link-active-color": "$white",
+        "nav-tabs-link-active-border-color": "$nav-tabs-border-color",
+        "navbar-dark-hover-color": "$white",
+        "navbar-light-hover-color": "$gray-800",
+        "navbar-light-active-color": "$gray-800",
+        "pagination-color": "$white",
+        "pagination-bg": "transparent",
+        "pagination-border-color": "rgba($black, 0.6)",
+        "pagination-hover-color": "$white",
+        "pagination-hover-bg": "transparent",
+        "pagination-hover-border-color": "rgba($black, 0.6)",
+        "pagination-active-bg": "transparent",
+        "pagination-active-border-color": "rgba($black, 0.6)",
+        "pagination-disabled-bg": "transparent",
+        "pagination-disabled-border-color": "rgba($black, 0.6)",
+        "jumbotron-bg": "darken($gray-900, 5%)",
+        "card-border-color": "rgba($black, 0.6)",
+        "card-cap-bg": "lighten($gray-800, 10%)",
+        "card-bg": "lighten($body-bg, 5%)",
+        "popover-bg": "lighten($body-bg,5%)",
+        "modal-content-bg": "lighten($body-bg,5%)",
+        "modal-header-border-color": "rgba(0,0,0,.2)",
+        "progress-bg": "darken($gray-900,5%)",
+        "progress-bar-color": "$gray-600",
+        "list-group-bg": "lighten($body-bg,5%)",
+        "list-group-border-color": "rgba($black,0.6)",
+        "list-group-hover-bg": "lighten($body-bg,10%)",
+        "list-group-active-color": "$white",
+        "list-group-active-bg": "$list-group-hover-bg",
+        "list-group-active-border-color": "$list-group-border-color",
+        "list-group-disabled-color": "$gray-700",
+        "list-group-action-color": "$white",
+        "breadcrumb-active-color": "$gray-500"
+      },
+      "colors": {
+        "primary": "#1a1a1a",
+        "secondary": "#ff8040",
+        "success": "#015668",
+        "danger": "#FF304F",
+        "info": "#0F81C7",
+        "warning": "#0DE2EA",
+        "light": "#C8C8C8",
+        "dark": "#000000"
+    }},
+	{
+	"name": "Hello Kiddie",
+	"fonts": {
+	    "headings":"Raleway"
+	},
+	"desc": "That annoying little kid that has no manners.",
+	"custom" : "html {font-size: 0.8rem;}@include media-breakpoint-up(sm) {html {font-size: .9rem;}}@include media-breakpoint-up(md) {html {font-size: 1rem;}}@include media-breakpoint-up(lg) {html {font-size: 1.1rem;}}",
+	"colors": {
+		"primary": "#f6648C",
+		"secondary": "#CACACA",
+		"success": "#035668",
+		"danger": "#FF444F",
+		"info": "#3F81C7",
+		"warning": "#0DE2EA",
+		"light": "#eAeAeA",
+		"dark": "#223322"
+	}},
+	{
+    "name": "Blue Voltage",
+    "fonts": {
+	    "headings":"Nunito"
+	},
+    "desc": "The intense, saturated blue theme with rounded buttons.",
+    "vars": {
+        "body-bg": "#ffffff",
+        "display1-weight": "600",
+    	"display2-weight": "600",
+    	"display3-weight": "600",
+    	"btn-border-radius": "1.3rem",
+	    "btn-border-radius-lg": "1.6rem",
+	    "btn-border-radius-sm": ".8rem"
+    },
+    "colors": {
+        "primary": "#1633ff",
+        "secondary": "#a0b7bc",
+        "success": "#1633ff",
+        "danger": "#00f900",
+        "info": "#7ebcfa",
+        "warning": "#00f900",
+        "light": "#eef0f2",
+        "dark": "#000633"
+    }},
+	{
+	"name": "Hootstrap",
+	"fonts": {
+	    "headings":"Autour One",
+	    "base":"Open Sans"
+	},
+	"desc": "It's a hootin, hollarin ho-down y'all!",
+	"colors": {
+		"primary": "#528078",
+		"secondary": "#eed75a",
+		"success": "#FEC100",
+		"danger": "#703B3B",
+		"info": "#63e792",
+		"warning": "#FFE869",
+		"light": "#FDFBF7",
+		"dark": "#555555"
+	}},
+	{
+	"name": "Herbie",
+	"fonts": {
+	    "headings":"Crete Round",
+	    "base":"Nunito"
+	},
+	"desc": "Unique and stylish with a readable font.",
+	"colors": {
+		"primary": "#083358",
+		"secondary": "#F67280",
+		"success": "#0074E4",
+		"danger": "#FF4057",
+		"info": "#74DBEF",
+		"warning": "#FC3C3C",
+		"light": "#F2F2F0",
+		"dark": "#072247"
+	}},
+	{
+	"name": "Boldstrap",
+	"fonts": {
+	    "headings":"Yantramanav"
+	},
+	"desc": "A big, blue sky and no clouds in sight.",
+	"vars": {"body-bg":"#efefef"},
+	"colors": {
+		"primary": "#27a2fc",
+		"secondary": "#a0b7bc",
+		"success": "#37bd74",
+		"danger": "#e8286b",
+		"info": "#7ebcfa",
+		"warning": "#ff9b37",
+		"light": "#eef0f2",
+		"dark": "#3c4055"
+	}},
+    {
+	"name": "Lovey",
+	"desc": "That preppy Irish lass with good taste.",
+	"fonts": {
+	    "headings":"Lato",
+	    "base":"Muli"
+	},
+	"colors": {
+		"primary": "#D80E70",
+		"secondary": "#dddddd",
+		"success": "#4EF037",
+		"danger": "#FA4659",
+		"info": "#00BBF0",
+		"warning": "#f4f133",
+		"light": "#eeeeee",
+		"dark": "#353535"
+	}},
+	{
+    "name": "Bootstrap Purple",
+    "fonts": {
+	    "headings":"Arial"
+	},
+    "desc": "Primarily purple like the Bootstrap docs.",
+    "colors": {
+        "primary": "#563d7c",
+        "secondary": "#868e96",
+        "success": "#28a745",
+        "danger": "#dc3545",
+        "info": "#17a2b8",
+        "warning": "#ffc107",
+        "light": "#f8f9fa",
+        "dark": "#343434"
+    }},
+	{
+	"name": "Monotony",
+	"fonts": {
+	    "headings":"Open Sans",
+	    "base":"Montserrat"
+	},
+	"desc": "You become resigned to the monotony of one color.",
+	"colors": {
+		"primary": "#222222",
+		"secondary": "#666666",
+		"success": "#333333",
+		"danger": "#434343",
+		"info": "#515151",
+		"warning": "#5f5f5f",
+		"light": "#eceeec",
+		"dark": "#111111"
+	}}
+]
