@@ -5,8 +5,8 @@
 This project includes all the free, open source Bootstrap 4 themes as seen on [ThemesGuide](http://themes.guide).
 You can also use [Whootstrap](http://whootstrap.themes.guide) to easily create more custom Bootstrap themes. 
 
-<http://themes.guide>
-<http://whootstrap.themes.guide>
+<http://themes.guide>  
+<http://whootstrap.themes.guide>  
 
 ## Usage
 
@@ -27,7 +27,7 @@ Additionally, each theme folder contains 3 example layout templates to get your 
 - template1.html
 - template2.html
 
-**Bootstrap 4**
+**All themes use the latest Bootstrap 4.1**
 
 - <https://github.com/twbs/bootstrap/>
 
