@@ -2,112 +2,104 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%- name %> Bootstrap 4 Theme</title>
-    <meta name="description" content="A free, open source Bootstrap 4 theme by Themes.guide and Whootstrap" />
+    <title>Bootstrap Purple Bootstrap 4 Template 3</title>
+    <meta name="description" content="A free, open source Bootstrap 4 theme by Themes.guide" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Whootstrap">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="template3.css" />
   </head>
-  <body data-spy="scroll" data-target="#navbar1" data-offset="60">
-    <div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-12 p-0">
-            <div class="text-center m-0 vh-75 bg-primary d-flex flex-column justify-content-center text-light">
-                <h1 class="display-4"><%- name %></h1>
-                <p class="lead"><%- desc %></p>
-                <p class="lead">
-                    <a class="btn btn-outline-light btn-lg" href="http://whootstrap.themes.guide" role="button">Learn more</a>
-                </p>
+<body data-spy="scroll" data-target="#navbar1" data-offset="60">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 p-0 bg-primary vh-50 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 py-2 text-light">
+                        <h1 class="display-3 mb-0">
+                            <span data-ng-bind="selected.palette.name" class="ng-binding"></span>
+                        </h1>
+                        <p class="lead mb-3 w-75"><span data-ng-bind="selected.palette.desc" class="ng-binding"></span> <strong>Whoot!strap</strong> makes it easy to customize this, and other free Bootstrap 4 themes for your downloading pleasure.</p>
+                        <a class="btn btn-outline-light btn-lg toggles-ignore mr-2" href="http://whootstrap.themes.guide" target="_new">Customize</a> 
+                        <a class="btn btn-outline-light btn-lg toggles-ignore" href="http://twitter.com/Whootstrap" target="_new" rel="nofollow" title="Do your good daily deed, and follow along"><i class="fa fa-twitter fa-lg"></i> @Whootstrap</a> 
+                    </div>
+                    <div class="col-xl-6 col">
+                       <div class="text-lg-right" title="Theme colors">
+                           <h3>
+                               <span class="badge badge-pill bg-secondary" title="secondary">&nbsp;</span>
+                               <span class="badge badge-pill bg-success" title="success">&nbsp;</span>
+                               <span class="badge badge-pill bg-danger" title="danger">&nbsp;</span>
+                               <span class="badge badge-pill bg-info" title="info">&nbsp;</span>
+                               <span class="badge badge-pill bg-warning" title="warning">&nbsp;</span>
+                               <span class="badge badge-pill bg-light" title="light">&nbsp;</span>
+                               <span class="badge badge-pill bg-dark" title="dark">&nbsp;</span>
+                           </h3>
+                       </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary" id="navbar1">
-    <a class="navbar-brand mr-1" href="#">Themes.guide</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#buttons">Buttons</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#navs">Navs</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#cards">Cards</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#modals">Modals</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#typography">Typography</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#forms">Forms</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#grid">Grid</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  More
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDd">
-                    <a class="dropdown-item px-2" href="#more">Badges</a>
-                    <a class="dropdown-item px-2" href="#more">Tooltips &amp; Popups</a>
-                    <a class="dropdown-item px-2" href="#more">Progress &amp; Alerts</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item px-2" href="#more">All</a>
-                </div>
-            </li>
-        </ul>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
+    <div class="container h-100">
+        <a class="navbar-brand mr-1" href="http://themes.guide">Themes.guide</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Layouts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="layoutDd">
+                        <a class="dropdown-item px-2" href="./">Default</a>
+                        <a class="dropdown-item px-2" href="./template2.html">Layout 2</a>
+                        <a class="dropdown-item px-2" href="./template3.html">Layout 3</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#buttons">Buttons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#navs">Navs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cards">Cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#modals">Modals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#typography">Typography</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#forms">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#grid">Grid</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      More
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDd">
+                        <a class="dropdown-item px-2" href="#more">Badges</a>
+                        <a class="dropdown-item px-2" href="#more">Tooltips &amp; Popups</a>
+                        <a class="dropdown-item px-2" href="#more">Progress &amp; Alerts</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item px-2" href="#more">All</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-
 <main>
-    <section id="cards" class="container">
-        <div class="row vh-100">
-            <div class="col-12 my-auto">
-                <div class="row text-center">
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h1 class="display-2 text-primary"><span class="ion ion-ios-monitor-outline"></span></h1>
-                                <h4 class="card-title text-primary">Responsive</h4>
-                                <p class="card-text">Based on mobile-first Bootstrap 4, all themes are 100% responsive and designed to look great on everything from smartphones to tablets to desktops..</p>
-                                <a href="#" class="btn btn-primary mt-auto">Button</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h1 class="display-2 text-primary"><span class="ion ion-ios-snowy"></span></h1>
-                                <h4 class="card-title text-primary">Unique</h4>
-                                <p class="card-text">Don't like that typical Bootstrap look? Each theme has a custom look-and-feel, while maximizing use of Bootstrap without extensive additional CSS & JS.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Button</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                <h1 class="display-2 text-primary"><span class="ion ion-ios-checkmark-outline"></span></h1>
-                                <h4 class="card-title text-primary">Consistent</h4>
-                                <p class="card-text">Themes are crafted with care for design and performance. Like Bootstrap, the themes are built on modern HTML5 & CSS3 standards to ensure consistency and cross-browser support.</p>
-                                <a href="#" class="btn btn-primary mt-auto">Button</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="buttons" class="bg-light pb-5">
+    <section id="buttons" class="pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -534,9 +526,8 @@
         </div>
     </section>
 </main>
-
 <footer id="footer" class="bg-dark text-light py-5" data-ng-show="!busy">
-    <div class="col-xl-9 col-lg-11 container-alt mx-auto py-5">
+    <div class="container py-5">
         <div class="row">
             <div class="col-6 col-md-6 col-lg-3 mb-2">
                 <h6 class="text-uppercase">Tools</h6>
@@ -553,7 +544,6 @@
                     <li><a class="text-white" target="_new" href="http://wdstack.com" title="The top projects, tools and apps for Web developers">WDStack</a></li>
                     <li><a class="text-white" target="_new" href="http://theme.cards">Theme.cards</a></li>
                     <li><a class="text-white" target="_new" title="Learn about Bootstrap 4 using this free theme" href="http://bootstrap4.guide">Bootstrap4.guide</a></li>
-                    <li><a class="text-white" target="_new" href="http://iatek.com">Iatek LLC</a></li>
                 </ul>
             </div>
             <div class="col-12 col-md-12 col-lg-6 mb-2 text-right">

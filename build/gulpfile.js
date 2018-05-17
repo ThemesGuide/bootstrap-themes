@@ -22,14 +22,15 @@ gulp.task('compileEjs', function () {
 gulp.task('merge', function() {
     var data = require('./data/themes.json');
     for (var t in data) {
-        //console.log(data.posts[p]);
         var template = data[t];
         var foldername = template.name.toLowerCase().replace(" ","_");
-        gulp.src("./views/index.ejs")
+        gulp.src("./*.ejs")
           .pipe(ejs(template))
-        	.pipe(rename({basename:"index",extname:".html"}))
-        	.pipe(gulp.dest("./"+foldername));
+        	.pipe(rename({extname:".html"}))
+        	.pipe(gulp.dest("../"+foldername+"/"));
+        gulp.src("./*.css").pipe(gulp.dest("../"+foldername+"/"));
     }
 });
+
 
 gulp.task('default',['merge']);
