@@ -2,7 +2,11 @@
 
 ## A collection of Bootstrap 4 themes generated with Whootstrap
 
-This project includes all the free, open source Bootstrap 4 themes as seen on ThemesGuide.com. 
+This project includes all the free, open source Bootstrap 4 themes as seen on [ThemesGuide](http://themes.guide).
+You can also use [Whootstrap](http://whootstrap.themes.guide) to easily create more custom Bootstrap themes. 
+
+<http://themes.guide>
+<http://whootstrap.themes.guide>
 
 ## Usage
 
