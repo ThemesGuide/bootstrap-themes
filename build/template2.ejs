@@ -17,11 +17,11 @@
             <div class="row align-items-center vh-50 py-5">
                 <div class="col-xl-4 col-lg-6 ml-auto py-2 text-light order-2 text-center text-lg-left">
                     <h1 class="display- mb-0">
-                        <span data-ng-bind="selected.palette.name" class="ng-binding"><% -name %></span>
+                        <span><%- name %></span>
                     </h1>
-                    <p class="lead mb-3"><span data-ng-bind="selected.palette.desc" class="ng-binding"><% -desc %></span> Use <strong>Whoot!strap</strong> to easily customize this, and other free Bootstrap 4 themes for your downloading pleasure.</p>
-                    <a class="btn btn-outline-light btn-lg toggles-ignore mr-2" href="http://whootstrap.themes.guide" target="_new">Customize</a> 
-                    <a class="btn btn-outline-light btn-lg toggles-ignore" href="http://twitter.com/Whootstrap" target="_new" rel="nofollow" title="Do your good daily deed, and follow along"><i class="fa fa-twitter fa-lg"></i> @Whootstrap</a> 
+                    <p class="lead mb-3"><span><%- desc %></span> Use <strong>Whoot!strap</strong> to easily customize this, and other free Bootstrap 4 themes for your downloading pleasure.</p>
+                    <a class="btn btn-outline-light btn-lg mr-2" href="http://whootstrap.themes.guide" target="_new">Customize</a> 
+                    <a class="btn btn-outline-light btn-lg" href="theme.css" role="button">Download Theme</a> 
                 </div>
                 <div class="col-xl-4 col-lg-6 col mr-auto order-1 order-lg-last align-items-center justify-content-center justify-content-lg-end d-flex">
                      <div class="img-fluid text-white">
@@ -316,7 +316,7 @@
                 <div class="col-lg-4 mb-4">
                     <div class="card border-primary h-100">
                         <div class="card-body d-flex flex-column align-items-start">
-                            <h4 class="card-title text-primary" ng-bind="'Font ' + selected.font">Card Outline</h4>
+                            <h4 class="card-title text-primary">Card Outline</h4>
                             <p class="card-text">Whoot!strap makes it easy to customize this, and other free Bootstrap 4 themes for your downloading pleasure.</p>
                             <a href="#" class="btn btn-primary mt-auto">Button</a>
                         </div>
@@ -554,38 +554,39 @@
             </div>
         </section>
     </main>
-    <footer id="footer" class="bg-dark text-light py-5" data-ng-show="!busy">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-6 col-md-6 col-lg-3 mb-2">
-                <h6 class="text-uppercase">Tools</h6>
-                <ul class="nav flex-column">
-                    <li><a class="text-white" target="ext" href="http://whootstrap.themes.guide">Whootstrap</a></li>
-                    <li><a class="text-white" target="ext" href="http://themes.guide">Themes.guide</a></li>
-                    <li><a class="text-white" target="ext" href="http://codeply.com" title="Prototype and edit code for Bootstrap and other responsive frameworks">Codeply</a></li>
-                    <li><a class="text-white" target="ext" href="http://bootply.com">Bootply</a></li>
-                </ul>
+    <footer id="footer" class="bg-dark text-light py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-6 col-md-6 col-lg-3 mb-2">
+                    <h6 class="text-uppercase">Tools</h6>
+                    <ul class="nav flex-column">
+                        <li><a class="text-white" target="ext" href="http://whootstrap.themes.guide">Whootstrap</a></li>
+                        <li><a class="text-white" target="ext" href="http://themes.guide">Themes.guide</a></li>
+                        <li><a class="text-white" target="ext" href="http://codeply.com" title="Prototype and edit code for Bootstrap and other responsive frameworks">Codeply</a></li>
+                        <li><a class="text-white" target="ext" href="http://bootply.com">Bootply</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-6 col-lg-3 mb-2">
+                    <h6 class="text-uppercase">More</h6>
+                    <ul class="nav flex-column">
+                        <li><a class="text-white" target="_new" href="http://wdstack.com" title="The top projects, tools and apps for Web developers">WDStack</a></li>
+                        <li><a class="text-white" target="_new" href="http://theme.cards">Theme.cards</a></li>
+                        <li><a class="text-white" target="_new" href="http://www.bootbundle.com">BootBundle</a></li>
+                        <li><a class="text-white" target="_new" title="Learn about Bootstrap 4 using this free theme" href="http://bootstrap4.guide">Bootstrap4.guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 mb-2 text-right">
+                    <h6 class="text-uppercase">Follow</h6>
+                    <ul class="nav float-right">
+                        <li><a class="text-white mr-1" rel="nofollow" href="http://twitter.com/whootstrap" title="Follow on Twitter"><i class="h1 fa fa-fw fa-twitter fa-2x ion-social-twitter-outline"></i></a></li>
+                        <li><a class="text-white mr-1" rel="nofollow" href="https://www.facebook.com/codeply" title="Follow on Facebook"><i class="h1 fa fa-fw fa-facebook fa-2x ion-social-facebook-outline"></i></a></li>
+                        <li><a class="text-white" href="https://medium.com/wdstack" title="Follow on Medium"><i class="h1 fa fa-fw fa-medium fa-2x ion-social-medium-outline"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-3 mb-2">
-                <h6 class="text-uppercase">More</h6>
-                <ul class="nav flex-column">
-                    <li><a class="text-white" target="_new" href="http://wdstack.com" title="The top projects, tools and apps for Web developers">WDStack</a></li>
-                    <li><a class="text-white" target="_new" href="http://theme.cards">Theme.cards</a></li>
-                    <li><a class="text-white" target="_new" title="Learn about Bootstrap 4 using this free theme" href="http://bootstrap4.guide">Bootstrap4.guide</a></li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-12 col-lg-6 mb-2 text-right">
-                <h6 class="text-uppercase">Follow</h6>
-                <ul class="nav float-right">
-                    <li><a class="text-white mr-1" rel="nofollow" href="http://twitter.com/whootstrap" title="Follow on Twitter"><i class="fa fa-fw fa-twitter fa-2x ion-social-twitter-outline"></i></a></li>
-                    <li><a class="text-white mr-1" rel="nofollow" href="https://www.facebook.com/codeply" title="Follow on Facebook"><i class="fa fa-fw fa-facebook fa-2x ion-social-facebook-outline"></i></a></li>
-                    <li><a class="text-white" href="https://medium.com/wdstack" title="Follow on Medium"><i class="fa fa-fw fa-medium fa-2x ion-social-medium-outline"></i></a></li>
-                </ul>
-            </div>
+            <!--/row-->
         </div>
-        <!--/row-->
-    </div>
-</footer>
+    </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

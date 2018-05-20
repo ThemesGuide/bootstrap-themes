@@ -1,0 +1,24 @@
+/*! Whootstrap `Signal` Bootstrap 4 theme */
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,400,700);
+$font-family-base:Nunito;
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:200,300,400,700);
+$headings-font-family:Comfortaa;
+
+$enable-grid-classes:false;
+$primary:#FF304F;
+$secondary:#CACACA;
+$success:#015668;
+$danger:#06648C;
+$info:#0F81C7;
+$warning:#0DE2EA;
+$light:#ececec;
+$dark:#222222;
+
+/*! Import Bootstrap 4 variables */
+@import "functions";
+@import "variables";
+
+$gray-300:#e0e0e0;
+@import "bootstrap";
+
+// Add SASS theme customizations here..
