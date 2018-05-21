@@ -7,13 +7,14 @@ var rename  = require("gulp-rename");
 var fs      = require("fs");
 var concat  = require('gulp-concat');
 var mergeStream = require('merge-stream');
+var bootstrapVersion = "4.1.1";
 
 /* read theme json to create theme.scss */
 gulp.task('themes', function(cb) {
     var data = require('./data/themes.json');
     var output = "../src";
-    for (var t in data) {
-        var theme = data[t];
+    for (var t in data.themes) {
+        var theme = data.themes[t];
         var foldername = theme.name.toLowerCase().replace(" ","_");
         var sassString = '/*! Whootstrap `'+ theme.name+'` Bootstrap 4 theme */\n';
         
@@ -98,15 +99,22 @@ gulp.task('sass', ['themes'], function() {
 gulp.task('merge', function() {
     var data = require('./data/themes.json');
     var output = "../dist";
-    for (var t in data) {
-        var template = data[t];
+    for (var t in data.themes) {
+        var template = data.themes[t];
+        template.allThemes = data.themes;
         var foldername = template.name.toLowerCase().replace(" ","_");
         gulp.src("./*.ejs")
           .pipe(ejs(template))
         	.pipe(rename({extname:".html"}))
         	.pipe(gulp.dest(output+"/"+foldername+"/"));
         gulp.src("./*.css").pipe(gulp.dest(output+"/"+foldername+"/"));
+        gulp.src("./*.js").pipe(gulp.dest(output+"/"+foldername+"/"));
     }
+    /* home page */
+    gulp.src("../src/index.ejs")
+      .pipe(ejs(data))
+    	.pipe(rename({extname:".html"}))
+    	.pipe(gulp.dest(output+"/"));
 });
 
 gulp.task('default',['themes','sass','merge']);
