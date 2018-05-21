@@ -29,7 +29,9 @@ Additionally, each theme folder contains 3 example layout templates to get your 
 
 **All themes use the latest Bootstrap 4.1**
 
-- <https://github.com/twbs/bootstrap/>
+- Bootstrap: <https://github.com/twbs/bootstrap/>
+- Ionicons: <https://ionicframework.com/docs/ionicons/>
+- Google Fonts: <https://fonts.google.com/>
 
 ## License
 
