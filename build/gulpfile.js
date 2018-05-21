@@ -108,7 +108,7 @@ gulp.task('merge', function() {
         	.pipe(rename({extname:".html"}))
         	.pipe(gulp.dest(output+"/"+foldername+"/"));
         gulp.src("./*.css").pipe(gulp.dest(output+"/"+foldername+"/"));
-        gulp.src("./*.js").pipe(gulp.dest(output+"/"+foldername+"/"));
+        gulp.src("./scripts.js").pipe(gulp.dest(output+"/"+foldername+"/"));
     }
     /* home page */
     gulp.src("../src/index.ejs")
