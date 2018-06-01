@@ -35,30 +35,14 @@
       return false;
     }
     
-    var modalCode       = $('<div id="modalCode" class="modal fade" />');
-    var modalDialog     = $('<div class="modal-dialog modal-dialog-centered modal-lg" />');
-    var modalContent    = $('<div class="modal-content" />');
-    var modalHeader     = $('<div class="modal-header align-items-center"><h3 class="mb-0">Source Code</h3><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></div>');
-    var modalBody       = $('<div class="modal-body d-block py-3"><span class="badge badge-dark font-weight-light mb-2">The following markup was copied to the clipboard...</span><textarea id="code" class="form-control" rows="10" wrap="off"></textarea></div>');
-    modalHeader.appendTo(modalContent);
-    modalBody.appendTo(modalContent);
-    modalContent.appendTo(modalDialog);
-    modalDialog.appendTo(modalCode);
-    modalCode.appendTo('body');
-    
-    var css = ".copyable{position:relative}.copyable .copyable-trigger{color:#333;background-color:rgba(255,255,255,.8);border:1px #888 solid;border-radius:4px;position:absolute;padding:3px 6px;top:0;right:0;z-index:102;text-decoration:none;font-family:monospace;font-size:11px;cursor:pointer;display:none}.copyable:hover .copyable-trigger{display:inline-block}";
-    
-    $("head").append($(document.createElement("style"))
-        .html(css)
-    );
-    
-    $('main').find('.card, .btn-group, .btn, .navbar, .modal, .form-group, .list-group, .alert, .progress, .table-responsive, .jumbotron, .badge, .nav').each(function(){
+    $('main').find('.card, .btn-group, .btn, .navbar, .modal, .form-group, .alert, .progress, .table-responsive, .jumbotron, .badge, .nav').each(function(){
         var $this = $(this);
         var content = $this.get(0).outerHTML;
         var arrayOfLines = content.match(/[^\r\n]+/g);
         var secondLine = 0;
         for (var l in arrayOfLines) {
             var tabCount;
+            console.log(arrayOfLines[l]);
             if (l>0) {
                 tabCount = ((arrayOfLines[l]||'').match(/[\s{4}|\t{1}]\S/g)||[]).length;                
                 if (l==1) { secondLine = tabCount }
@@ -71,23 +55,49 @@
             }
         }
         content = arrayOfLines.join('\n');
-        var title = "Click to view/copy source";
-
-        $this.addClass("copyable");
-        var trigger = $("<a href class='copyable-trigger'>&lt;&gt;</a>");
-        $this.append(trigger);
+        var title = "Click to copy source";
+        var mode = "modal";
         
-        trigger.tooltip({
+        if (mode=="modal") {
+            title = "Click to view source";
+        }
+        
+        $this.addClass("copyable");
+        
+        $this["tooltip"]({
             title: title,
-            placement: 'bottom',
+            placement: 'right',
             trigger: 'hover'
         });
         
-        trigger.on('click',function(e){
-            copyTextToClipboard(content);
-            $("#code").text(content);
-            $("#modalCode").modal('show');
-            return false;
+        $this.on('show.bs["tooltip"]', function(e) {
+            if ($this.find('.card, .btn-group, .btn, .form-group, .alert, .progress').length>0) {
+                $this["tooltip"]('hide');
+            }
+        });
+        
+        $this.on('click',function(e){
+        
+            if (mode=="tooltip") {
+                e.stopPropagation();
+                e.preventDefault();
+                $this["tooltip"]('dispose');
+                $this["tooltip"]({
+                    title: "Copied!",
+                    fallbackPlacement:"clockwise",
+                    placement: 'right',
+                    trigger: 'hover'
+                });
+                $this["tooltip"]('show');
+                copyTextToClipboard(content);
+            }
+            else {
+                $("#code").text(content);
+                $("#modalCode").modal('show');
+            }
+            
+        }).mouseleave(function(){
+            $this["tooltip"]('dispose');
+            $this["tooltip"]({title:title, placement: 'right', trigger: 'hover'});
         });
     });
-    

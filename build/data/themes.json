@@ -60,27 +60,34 @@
 		"fonts": {
 		    "headings":"Comfortaa"
 		},
+		"images": {
+			"bg":"https://images.unsplash.com/photo-1489846986031-7cea03ab8fd0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a6c62b8e2662924c44c4725b8286ed60&auto=format&fit=crop&w=1600&q=80"
+		},
+		"custom":".navbar-dark.bg-primary {background-color:#111111 !important;}",
 		"vars": {
+			"enable-shadows": true,
 	        "gray-300": "#000000",
-	        "gray-800": "#4a535b",
-	        "body-bg": "$gray-800",
-	        "body-color": "#aaa",
-	        "link-color": "$white",
+	        "gray-800": "#555555",
+	        "body-bg": "$black",
+	        "body-color": "#cccccc",
+	        "link-color": "#f0f0f0",
+	        "link-hover-color": "darken($link-color,20%)",
 	        "font-size-base": "1.1rem",
 	        "table-accent-bg": " rgba($white,.05)",
 	        "table-hover-bg": "rgba($white,.075)",
-	        "table-border-color": "rgba($black,.6)",
+	        "table-border-color": "rgba($white, 0.3)",
 	        "table-dark-border-color": " $table-border-color",
 	        "table-dark-color": "$white",
+	        "input-bg": "$gray-300",
 	        "input-disabled-bg": " #ccc",
 	        "dropdown-bg": "$gray-800",
 	        "dropdown-divider-bg": "rgba($black,.15)",
 	        "dropdown-link-color": "$body-color",
 	        "dropdown-link-hover-color": "$white",
 	        "dropdown-link-hover-bg": "$body-bg",
-	        "nav-tabs-border-color": "rgba($black, 0.6)",
+	        "nav-tabs-border-color": "rgba($white, 0.3)",
 	        "nav-tabs-link-hover-border-color": "$nav-tabs-border-color",
-	        "nav-tabs-link-active-color": "$white",
+	        "nav-tabs-link-active-bg": "transparent",
 	        "nav-tabs-link-active-border-color": "$nav-tabs-border-color",
 	        "navbar-dark-hover-color": "$white",
 	        "navbar-light-hover-color": "$gray-800",
@@ -110,18 +117,19 @@
 	        "list-group-active-color": "$white",
 	        "list-group-active-bg": "$list-group-hover-bg",
 	        "list-group-active-border-color": "$list-group-border-color",
-	        "list-group-disabled-color": "$gray-700",
+	        "list-group-disabled-color": "$gray-800",
+	        "list-group-disabled-bg": "$black",
 	        "list-group-action-color": "$white",
 	        "breadcrumb-active-color": "$gray-500"
 	      },
 	      "colors": {
-	        "primary": "#1a1a1a",
-	        "secondary": "#ff8040",
+	      	"primary": "#FF550B",
+	        "secondary": "#303030",
 	        "success": "#015668",
 	        "danger": "#FF304F",
 	        "info": "#0F81C7",
 	        "warning": "#0DE2EA",
-	        "light": "#C8C8C8",
+	        "light": "#e8e8e8",
 	        "dark": "#000000"
 	    }},
 		{
@@ -129,8 +137,11 @@
 		"fonts": {
 		    "headings":"Raleway"
 		},
-		"desc": "That annoying little kid that has no manners.",
-		"custom" : "html {font-size: 0.8rem;}@include media-breakpoint-up(sm) {html {font-size: .9rem;}}@include media-breakpoint-up(md) {html {font-size: 1rem;}}@include media-breakpoint-up(lg) {html {font-size: 1.1rem;}}",
+		"desc": "Like a precocious child that doesn't go away.",
+		"images": {
+			"bg": "https://images.unsplash.com/photo-1495977958109-d0a07c767f0e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2b819fca66b1fedb4965a8693121df7d&auto=format&fit=crop&w=1600&q=80"
+		},
+		"custom": "html {font-size: 0.8rem;}@include media-breakpoint-up(sm) {html {font-size: .9rem;}}@include media-breakpoint-up(md) {html {font-size: 1rem;}}@include media-breakpoint-up(lg) {html {font-size: 1.1rem;}}",
 		"colors": {
 			"primary": "#f6648C",
 			"secondary": "#CACACA",
@@ -282,6 +293,25 @@
 		"colors": {
 			"primary": "#7F0FFF",
 			"secondary": "#bed6d5",
+			"success": "#420084",
+			"danger": "#f2460d",
+			"info": "#7ebcfa",
+			"warning": "#ff9933",
+			"light": "#eef0f2",
+			"dark": "#000633"
+		}},
+		{
+		"name": "Tequila",
+		"fonts": {
+			"headings": "Voltaire"
+		},
+		"desc": "Hungover on the beach at sunrise.",
+		"images":{
+			"bg":"https://images.unsplash.com/photo-1503756043224-101dab0dcb30?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4bd62d181f78bd2f85ab23a677acd6f4&auto=format&fit=crop&w=1600&q=80"
+		},
+		"colors": {
+			"primary": "#2F414A",
+			"secondary": "#F47B53",
 			"success": "#420084",
 			"danger": "#f2460d",
 			"info": "#7ebcfa",

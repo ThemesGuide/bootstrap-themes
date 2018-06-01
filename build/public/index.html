@@ -3,44 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%- name %> Bootstrap 4 Theme Full Screen</title>
-    <meta name="description" content="<%- name %> is a free, open source Bootstrap 4 theme by Themes.guide" />
+    <title>Boldstrap Bootstrap 4 Theme Full Screen</title>
+    <meta name="description" content="Boldstrap is a free, open source Bootstrap 4 theme by Themes.guide" />
     <meta name="generator" content="Whootstrap">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" rel="stylesheet">
     <link href="./theme.css" rel="stylesheet">
     <link href="./template.css" rel="stylesheet">
   </head>
-  <% if (typeof images!="undefined") {%>
-  <style>
-      header {
-          background-image: url('<%- images.bg %>');
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center top;
-      }
-  </style>
-  <% } %>
+  
   <body data-spy="scroll" data-target="#navbar1" data-offset="60">
     <header class="bg-primary">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-12">
-                    <div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %>">
-                        <h1 class="display-4"><%- name %></h1>
-                        <p class="lead"><%- desc %></p>
+                    <div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-light">
+                        <h1 class="display-4">Boldstrap</h1>
+                        <p class="lead">A big, blue sky and no clouds in sight.</p>
                         <div class="row">
                             <div class="col-lg-4 col-sm-6 mx-auto">
                                 <div class="input-group mb-3">
                                   <input type="text" class="form-control form-control-lg" placeholder="your@email">
                                   <div class="input-group-append">
-                                    <button class="btn btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> btn-lg rounded-right" type="button">Sign-up</button>
+                                    <button class="btn btn-outline-light btn-lg rounded-right" type="button">Sign-up</button>
                                   </div>
                                 </div>
                             </div>
                         </div>
                         <p class="lead">
-                            <a class="btn btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> btn-lg" href="theme.css" role="button">Download Theme</a>
+                            <a class="btn btn-outline-light btn-lg" href="theme.css" role="button">Download Theme</a>
                         </p>
                     </div>
                 </div>
@@ -60,10 +51,36 @@
                           Themes
                         </a>
                         <div class="dropdown-menu" aria-labelledby="themesDd">
-                            <% if (allThemes) {%>
-                            <% for (t in allThemes) {%>
-                            <a class="dropdown-item px-2" href="../<%- allThemes[t].name.replace(" ","_").toLowerCase() %>"><%- allThemes[t].name %></a>
-                            <% }} %>
+                            
+                            
+                            <a class="dropdown-item px-2" href="../signal">Signal</a>
+                            
+                            <a class="dropdown-item px-2" href="../greyson">Greyson</a>
+                            
+                            <a class="dropdown-item px-2" href="../fresca">Fresca</a>
+                            
+                            <a class="dropdown-item px-2" href="../darkster">Darkster</a>
+                            
+                            <a class="dropdown-item px-2" href="../hello_kiddie">Hello Kiddie</a>
+                            
+                            <a class="dropdown-item px-2" href="../blue_voltage">Blue Voltage</a>
+                            
+                            <a class="dropdown-item px-2" href="../hootstrap">Hootstrap</a>
+                            
+                            <a class="dropdown-item px-2" href="../herbie">Herbie</a>
+                            
+                            <a class="dropdown-item px-2" href="../boldstrap">Boldstrap</a>
+                            
+                            <a class="dropdown-item px-2" href="../lovey">Lovey</a>
+                            
+                            <a class="dropdown-item px-2" href="../bootstrap_purple">Bootstrap Purple</a>
+                            
+                            <a class="dropdown-item px-2" href="../monotony">Monotony</a>
+                            
+                            <a class="dropdown-item px-2" href="../poypull">Poypull</a>
+                            
+                            <a class="dropdown-item px-2" href="../tequila">Tequila</a>
+                            
                         </div>
                     </li>
                 </ul>
@@ -159,7 +176,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="pb-3">
-                            <button type="button" class="btn btn-primary mr-1">Primary <%- colors.primary.toUpperCase() %></button>
+                            <button type="button" class="btn btn-primary mr-1">Primary #27A2FC</button>
                             <button type="button" class="btn btn-outline-primary">Outline</button>
                         </div>
                         <div class="pb-3">
@@ -405,7 +422,7 @@
         <section id="typography" class="container pb-5">
             <div class="row">
                 <div class="col-12">
-                    <h4><a target="_new" href="https://fonts.google.com/specimen/<%- fonts.headings %>"><%- fonts.headings %></a></h4>
+                    <h4><a target="_new" href="https://fonts.google.com/specimen/Yantramanav">Yantramanav</a></h4>
                 </div>
                 <div class="col-xl-4">
                     <h6>Heading 6</h6>
@@ -544,7 +561,7 @@
                                 </tr>
                                 <tr>
                                     <td>Galway</td>
-                                    <td>08.05.18 <span class="badge badge-pill badge-primary">badge-pill</span></td>
+                                    <td>08.05.18 <span class="badge badge-primary">badge-pill</span></td>
                                     <td>5362</td>
                                 </tr>
                                 <tr class="table-primary">

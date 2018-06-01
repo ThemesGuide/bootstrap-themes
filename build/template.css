@@ -4,14 +4,9 @@ body,html {
   scroll-behavior: smooth;
 }
 
-/* body padding for fixed navbar */
-body {
-    padding-top: 56px;
-}
-
 /* hidden spacer before sections for proper offset */
 section:before {
-    height: 50px;
+    height: 56px;
     content: "";
     display:block;
 }
@@ -25,16 +20,4 @@ section:before {
 }
 .vh-100 {
     min-height: 100vh;
-}
-
-.copyable:hover:after {
-    content: '';
-    background-color: rgba(0,0,0,0.1);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 101;
-    cursor:copy;
 }
