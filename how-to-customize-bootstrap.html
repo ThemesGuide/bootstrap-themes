@@ -161,6 +161,19 @@
                     </pre>
                     
                     <p class="lead">
+                    2a (optional). Also, you can extend existing Bootstrap classes after the <code>@import "bootstrap";</code> to create new custom classes. For example, here is a new <code>.row-dark</code> 
+                    class that extends (inherits from) the Bootstrap <code>.row</code> class, and then adds a background-color and color…</p>
+
+                    <pre class="bg-dark text-white rounded mb-5">
+        /* optionally create new custom classes from existing classes */
+        .row-dark {
+            @extend .row;
+            background-color: #333333;
+            color: #ffffff;
+        }
+                    </pre>
+                                        
+                    <p class="lead">
                     3. Build with SASS. The CSS output will contain the custom overrides! Don’t forget to check the includePaths if your @imports fail. 
                     For a full list of variables you can override, see the variables.scss file. There are also these global variables.</p>
                     

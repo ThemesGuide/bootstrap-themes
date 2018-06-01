@@ -17,6 +17,16 @@
     <meta name="twitter:creator" content="@ThemesGuide">
     <meta name="twitter:title" content="Bootstrap 4 Themes and Templates">
     <meta name="twitter:description" content="Download free, open source Bootstrap 4 themes and templates by Themes.guide.">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103606808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-103606808-1');
+    </script>
+
   </head>
   <body id="page-top" data-spy="scroll" data-target=".fixed-top" data-offset="60">
     <% include ./partials/nav %> 
@@ -109,12 +119,13 @@
                         <%- themes[t].desc %><br>
                         <% if (themes[t].images){ %>Also includes high-res image from Unsplash.<% } %>
                     </p>
-                    <h4>
+                    <p><span class="h5" style="font-family:'<%- themes[t].fonts.headings %>'"><%- themes[t].fonts.headings %></span> is the font family.</p>
+                    <small class="text-muted">Color palette</small>
+                    <h5>
                         <% for (c in themes[t].colors) {%>
                         <span class="badge badge-pill" style="background-color:<%- themes[t].colors[c] %>;" title="<%- themes[t].colors[c] %>">&nbsp;</span>
                         <% } %>
-                    </h4>
-                    <span class="h5" style="font-family:'<%- themes[t].fonts.headings %>'"><%- themes[t].fonts.headings %></span> is the font family.
+                    </h5>
                 </div>
             </div>
             <% } %>
