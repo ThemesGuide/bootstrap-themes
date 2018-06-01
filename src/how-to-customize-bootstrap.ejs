@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Customize Bootstrap</title>
+    <link meta="description" content="How to customize Bootstrap 4 using CSS or SASS">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta property="og:image" name="twitter:image" content="http://themes.guide/favicon-1024.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ThemesGuide">
+    <meta name="twitter:creator" content="@ThemesGuide">
+    <meta name="twitter:title" content="Bootstrap 4 Themes and Templates">
+    <meta name="twitter:description" content="Learn how to customize Bootstrap">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-103606808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="https://www.codeply.com/js/embed.js"></script>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".fixed-top" data-offset="60">
+    <% include ./partials/nav %> 
+    <div class="container pt-5">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                
+            </div>
+            <div class="col-md-12 pt-5 text-center">
+                <h1 class="font-weight-light">How to Customize Bootstrap</h1>
+            </div>
+        </div>
+    </div>
+    
+    <section id="howto">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-sm-10 mx-auto">
+                    
+                    <p class="lead">
+                    You may want to customize Bootstrap for one or all of the following reasons:
+                    </p>
+
+                    <ul>
+                    <li>Change some aspect of the look or styles: color palette, fonts, border widths, etc..</li>
+                    <li>Change some functional aspect: change breakpoints, or increase the gutter width.</li>
+                    <li>Extend Bootstrap: add new colors, breakpoints and extend other existing Bootstrap classes.</li>
+                    </ul>
+                    
+                    <hr class="my-5">
+                    
+                    <p class="lead font-weight-bold">
+                    In general, there are 2 methods used to customize Bootstrap:</p>
+                    
+                    <h3 class="mt-5">1. Simple CSS Overrides</h3>
+                    
+                    <p class="lead">
+                    For maintainability, CSS customizations should be put in a separate <code>custom.css</code> file, so that the <code>bootstrap.css</code> remains unmodified. 
+                    The reference to the custom.css follows after the bootstrap.css for the overrides to work...</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="css/custom.css"&gt;</pre>
+                    
+                    <p class="lead">
+                    Just add whatever changes are needed in the custom CSS. For example, say I wanted to remove rounded borders from Cards, Buttons and Form Inputs. I add the CSS rule in the <code>custom.css</code>…</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        /* remove rounding from cards, buttons and inputs */
+        .card, .btn, .form-control {
+           border-radius: 0;
+        }</pre>
+                    
+                    <p class="lead">
+                    With this simple CSS change, the Cards, Buttons and Form Inputs now have square corners…</p>
+                    
+                    <p class="lead">
+                    Note: There’s no need to use !important in the custom CSS, unless you're overriding one of the Bootstrap Utility classes. CSS specificity always works for one CSS class to override another.</p>
+                    
+                    <h3 class="mt-5">2. Customize using SASS</h3>
+                    
+                    <p class="lead">
+                    If you’re familiar with SASS (and you should be to use this method), you can customize Bootstrap with your own custom.scss. There is a section in the Bootstrap 
+                    docs that explains this, however the docs don't explain how to utilize existing variables in your custom.scss.</p>
+                    
+                    <p class="lead">
+                    The overrides and “customization” are defined in a custom.scss file (you can name it whatever you want) that is separate from the Bootstrap SASS source files. This way any 
+                    changes you make don't impact the Bootstrap source, which makes future changes and upgrades much easier.</p>
+                    
+                    <p class="lead">
+                    1. Consider Bootstrap’s SASS folder structure, alongside your custom.scss...
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        |-- \bootstrap
+        |   |-- \scss
+        |   |   |-- \mixins
+        |   |   |-- \utilities
+        |   |   |-- bootstrap.scss
+        |   |   |-- variables.scss
+        |   |   |-- functions.scss
+        |   |   |-- ...more bootstrap scss files
+        |   custom.scss
+                    </pre>
+                    
+                    <p class="lead">
+                    2. In your custom.scss, import the Bootstrap files that are needed for the overrides. (Usually, this is just variables.scss. In some cases, 
+                    with more complex cutomizations, you may also need the functions, mixins, and other Bootstrap files.). Make the changes, then @import "bootstrap". 
+                    It's important to import Bootstrap after the changes.</p>
+                    
+                    <p class="lead">
+                    For example, let’s change the body background-color to light-gray #eeeeee, and change the blue primary contextual 
+                    color to Bootstrap's $purple variable...</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        /* custom.scss */    
+        
+        /* import the necessary Bootstrap files */
+        @import "bootstrap/functions";
+        @import "bootstrap/variables";
+        
+        /* -------begin customization-------- */   
+        
+        /* simply assign the value */ 
+        $body-bg: #eeeeee;
+        
+        /* or, use an existing variable */
+        $theme-colors: (
+          primary: $purple
+        );
+        /* -------end customization-------- */  
+        
+        /* finally, import Bootstrap to set the changes! */
+        @import "bootstrap";
+                    </pre>
+                    
+                    <p class="lead">
+                    3. Build with SASS. The CSS output will contain the custom overrides! Don’t forget to check the includePaths if your @imports fail. 
+                    For a full list of variables you can override, see the variables.scss file. There are also these global variables.</p>
+                    
+                    <p class="lead">
+                    Remember, with SASS you must @import “bootstrap” after the customizations in custom.scss to make them work! Once the SASS is compiled to 
+                    CSS (this is done using a server-side SASS compiler/processor), the resulting CSS is the customized Bootstrap.</p>
+                    
+                    <p class="lead font-weight-bold">In summary, here’s how the SASS customizations work:</p>
+                    
+                    <p class="lead">
+                    1_ First, when the custom.scss file is processed using SASS, the !default values defined in the bootstrap/variables.scss.</p>
+                    
+                    <p class="lead">
+                    2_ Next, our custom values are set, which will override any of the variables that had !default values set in bootstrap/variables.scss.</p>
+                    
+                    <p class="lead">
+                    3_ Finally, Bootstrap is imported (@import "bootstrap") which enables the SASS processor (A.K.A. compiler) to generate all the appropriate CSS using both the Bootstrap defaults and the custom overrides. 
+                    </p>
+                    
+                    <h3>Customization is important since not everyone wants that overly recognizable Bootstrap look.</h3>
+                    
+                </div>
+                <div class="col-sm-10 mx-auto mt-5 py-4 border-top">
+                    <div class="row">
+                        <div class="col-sm mr-auto">
+                            <a href="how-to-use-bootstrap-javascript.html">Prev: How to Use Bootstrap JavaScript</a>
+                        </div>
+                        <div class="col-sm-auto text-right">
+                            <a href="how-to-create-bootstrap-themes.html">Next: How to Create Bootstrap Themes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <h3 class="text-center">How can we help you?</h3>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" role="form" method="post">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-md-2 form-control-label">Email</label>
+                            <div class="col-md-12">
+                                <input type="email" class="form-control" id="inputEmail" name="contactEmail" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="col-md-2 form-control-label">Message</label>
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="inputMessage" rows="6" name="contactMessage"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xl-12">
+                                <button type="submit" id="contactBtn" class="btn btn-primary btn-lg mx-auto">Send it</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalThanks" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block text-center">
+                    <h3>Thank you!</h3>
+                    <h6>We'll be in touch</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include ./partials/footer %>
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  </body>
+</html>

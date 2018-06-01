@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use Bootstrap CSS</title>
+    <link meta="description" content="Learn the basics of Bootstap and how to use Bootstap CSS components">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta property="og:image" name="twitter:image" content="http://themes.guide/favicon-1024.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ThemesGuide">
+    <meta name="twitter:creator" content="@ThemesGuide">
+    <meta name="twitter:title" content="How to use Bootstrap CSS">
+    <meta name="twitter:description" content="Learn the basics of Bootstap and how to use Bootstap CSS components">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-103606808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="https://www.codeply.com/js/embed.js"></script>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".fixed-top" data-offset="60">
+    <% include ./partials/nav %> 
+    <div class="container pt-5">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <% include ./partials/htb %>
+            </div>
+            <div class="col-md-12 pt-5 text-center">
+                <h1 class="font-weight-light">How to Use Bootstrap CSS</h1>
+                <h4>Content, Styles and Components</h4>
+            </div>
+        </div>
+    </div>
+    
+    <section id="howto">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-sm-10 mx-auto">
+                    
+                    <p class="lead">
+                        <strong>The CSS is the most essential part of Bootstrap.</strong> The Bootstrap CSS can be used alone, without the Bootstrap 
+                        JavaScript components. <em>Generally</em> speaking, Bootstrap’s CSS provides two things…</p>
+                     
+                    <ul class="list-unstyled mt-2">
+                        <li>
+                            <h4>1. Element Styles</h4>
+                            <p class="lead">Buttons, fonts, colors, badges, typography, progress bars, alerts, etc…</p>
+                        </li>
+                        <li>
+                            <h4>2. The Bootstrap Grid</h4>
+                            <p class="lead">Layout helpers using “rows” and “columns”.</p>
+                        </li>
+                    </ul> 
+                
+                    <hr class="border-dark my-5">
+                        
+                    <p class="lead">
+                        First, I’ll explore all of the element styles Bootstrap provides to “make Web development faster and easier”.
+                        Remember that simple Bootstrap example I <a href="reasons-to-use-bootstrap.html">showed earlier</a>?</p>
+                        
+                    <div class="card w-75 my-5 mx-auto">
+                        <div class="card-block bg-white">
+                            <div data-codeply="RMPQJ3AqJn" data-codeply-height="200px"></div>
+                        </div>
+                    </div>
+                    
+                    <p class="lead">Let’s understand what Bootstrap <em>really</em> does to the Web page...</p>
+                    
+                    <hr class="my-5">
+                    
+                    <h2 class="mt-4">Reboot</h2>
+                    
+                    <p class="lead">
+                    First of all, the Bootstrap CSS includes Reboot which “normalizes” the Web page styles. Web browsers have different, somewhat ugly, 
+                    styles that are applied to Web pages by default.</p>
+                    
+                    <p class="lead">
+                    Since each browser’s defaults are a little different, Bootstrap uses Reboot to override the browser defaults, and provide the same 
+                    “elegant, consistent baseline” to build upon, regardless of the browser.</p>
+                    
+                    <p class="lead">
+                    This means that if the Web page is viewed on Safari, Chrome, Firefox or IE it will start out with the same baseline CSS styles.</p>
+                    
+                    <hr class="my-5">
+                    
+                    <h2 class="mt-4">Fonts (Typeface)</h2>
+                    
+                    <p class="lead">Text readability and scale are an important consideration in Web design. Bootstrap took this into consideration 
+                    when selecting the native font stack for Bootstrap 4:</p>
+                    
+                    <pre class="bg-dark text-white rounded">
+                    <code>
+        $font-family-sans-serif:
+          // Safari for OS X and iOS (San Francisco)
+          -apple-system,
+          // Chrome < 56 for OS X (San Francisco)
+          BlinkMacSystemFont,
+          // Windows
+          "Segoe UI",
+          // Android
+          "Roboto",
+          // Basic web fallback
+          "Helvetica Neue", Arial, sans-serif,
+          // Emoji fonts
+          "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+        The Bootstrap CSS makes the text look like this…
+                    </code>
+                    </pre>
+                    
+                    <p class="lead">Bootstrap's font stack (included in the CSS) makes the text look like this…</p>
+                    
+                    <img src="./assets/howto/fonts.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Fonts">
+                    
+                    <hr class="my-5">
+                    
+                    <h2 class="mt-4">Colors</h2>
+                    
+                    <p class="lead">
+                    No one gets too excited about a Web page that lacks color. Color is often used to convey meaning, and highlight 
+                    specific page content. Bootstrap provides 8 contextual colors that can be easily applied to HTML elements. You’ll see that 
+                    colors are named to convey meaning.
+                    </p>
+                    
+                    <img src="./assets/howto/colors.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Contextual Colors">
+                    
+                    <p class="lead">
+                    Additionally, Bootstrap CSS can be used to style and format any page content such as Tables, Forms, Images and Figures.
+                    </p>
+                    
+                    <hr class="my-5">
+                    
+                    <h2 class="mt-4">Components</h2>
+                
+                    <p class="lead">
+                        Take a quick glance at the following examples of the Bootstrap Components. These are just some 
+                        the “things” that can be easily “plugged-in” to your Web pages when using Bootstrap…
+                    </p>
+            
+                    <img src="./assets/howto/alert.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Alerts">
+                    
+                    <img src="./assets/howto/badges.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Badges">
+                    
+                    <img src="./assets/howto/bread.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Breadcrumbs">
+                    
+                    <img src="./assets/howto/buttons.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Buttons">
+                    
+                    <img src="./assets/howto/cards.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Cards">
+                    
+                    <img src="./assets/howto/collapse.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Collapse">
+            
+                    <img src="./assets/howto/dropdown.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Dropdown">
+                    
+                    <img src="./assets/howto/inputgroup.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Forms">
+                    
+                    <img src="./assets/howto/modals.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 Modal">
+                    
+                    <img src="./assets/howto/navbar.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap 4 NavBar">
+                    
+                    <hr class="my-5 border-dark">
+                    
+                    <h2 class="mt-4">How to <em>Use</em> Bootstrap CSS “Styles”</h2>
+                    
+                    <p class="lead">
+                    Using any of these Bootstrap Components is very easy. It’s just a matter of referencing the appropriate Bootstrap 
+                    CSS class in the HTML markup. For example, here’s how we use Bootstrap’s primary colored button on a Web page…
+                    </p>
+                    
+                    <pre class="bg-dark text-white rounded">
+                    <code>
+        &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+                    </code>
+                    </pre>
+                
+                    <p class="lead">
+                        So, the buttons’ style comes from the CSS “rules” for the <code>.btn</code> and <code>.btn-primary</code> CSS selectors. Here are the relevant rules in the Bootstrap CSS…
+                    </p>
+                    
+                    <pre class="bg-dark text-white rounded">
+                    <code>
+        .btn {
+          display: inline-block;
+          font-weight: 400;
+          text-align: center;
+          white-space: nowrap;
+          vertical-align: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          border: 1px solid transparent;
+          padding: 0.375rem 0.75rem;
+          font-size: 1rem;
+          line-height: 1.5;
+          border-radius: 0.25rem;
+          transition: color 0.15s ease-in-out, background-color 0.15s ease- in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .btn-primary {
+          color: #fff;
+          background-color: #007bff;
+          border-color: #007bff;
+        }
+                    </code>
+                    </pre>
+                    
+                <p class="lead">
+                    You might be wondering…
+                </p>
+
+                <h4 class="mt-5">Why does the button have 2 classes: <code>.btn</code> + <code>.btn-primary</code>?</h4>
+                
+                 <p class="lead">
+                    “Bootstrap’s components are built with a base-modifier class approach. This means the bulk of the 
+                    styling is contained to a base class (e.g., .btn) while style variations are confined to modifier classes (e.g., .btn-danger).” 
+                    This base-modifier approach in Bootstrap’s CSS makes customizing Bootstrap much easier which I will explain 
+                    <a href="how-to-customize-bootstrap.html">later in this article</a>.
+                </p>
+                    
+                <h5 class="mt-5">
+                Here's an overview of the relationship between the HTML markup and the Bootstrap CSS:
+                </h5>
+                
+                <img src="./assets/howto/css_html.png" class="d-block img-fluid mx-auto my-4" alt="CSS HTML and the Web page">
+                
+                <p class="lead">
+                    As you can see in the picture above, the “Primary” button has a different color than the normal Bootstrap blue color. 
+                    That’s because this Web page also includes a “theme.css” stylesheet after the “bootstrap.min.css”.</p>
+
+                <p class="lead">
+                    The CSS styles (or rules) defined in “theme.css” are overriding the default Bootstrap CSS styles, such as the 
+                    definition of the <code>.btn-primary</code> color. I will explain <a href="how-to-customize-bootstrap.html">Bootstrap theming and 
+                    customization</a> later in this article.
+                </p>
+                
+                <hr class="my-5 border-dark">
+                
+                <h5>
+                    Let’s look at more examples of Bootstrap Component <em>usage</em>...
+                </h5>
+                
+                <div class="card my-5 mx-auto">
+                    <div class="card-block bg-white">
+                        <div data-codeply="Tb6vzh4yPY" data-codeply-height="1300px"></div>
+                    </div>
+                </div>
+                
+                
+                <p class="lead">Badges</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;span class="badge badge-primary"&gt;Badge&lt;/span&gt;
+        &lt;span class="badge badge-pill badge-primary"&gt;Rounded Badge&lt;/span&gt;
+                </code></pre>
+                
+                <p class="lead">Breadcrumbs</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;nav aria-label="breadcrumb"&gt;
+          &lt;ol class="breadcrumb"&gt;
+            &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="breadcrumb-item active"&gt;Breadcrumb&lt;/li&gt;
+          &lt;/ol&gt;
+        &lt;/nav&gt;
+                </code></pre>
+                
+                <p class="lead">Buttons</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;button type="button" class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+                </code></pre>
+                
+                <p class="lead">Cards</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;div class="card"&gt;
+         &lt;div class="card-body d-flex flex-column align-items-start"&gt;
+          &lt;h4 class="card-title text-primary"&gt;Card Outline&lt;/h4&gt;
+          &lt;p class="card-text"&gt;With supporting text.&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary mt-auto"&gt;Button&lt;/a&gt;
+         &lt;/div&gt;
+        &lt;/div&gt;
+                </code></pre>
+                
+                <p class="lead">Forms & Inputs</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;form role="form"&gt;
+            &lt;div class="form-group row"&gt;
+                &lt;label class="col-md-2 col-form-label form-control-label"&gt;
+                    First
+                &lt;/label&gt;
+                &lt;div class="col-md-4"&gt;
+                    &lt;input class="form-control" type="text" value="Jane"&gt;
+                &lt;/div&gt;
+                &lt;label class="col-md-1 col-form-label form-control-label"&gt;
+                    Last
+                &lt;/label&gt;
+                &lt;div class="col-md-5"&gt;
+                    &lt;input class="form-control" type="text" value="Bishop"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row"&gt;
+                &lt;label class="col-lg-2 col-form-label form-control-label"&gt;
+                    Address
+                &lt;/label&gt;
+                &lt;div class="col-lg-10"&gt;
+                    &lt;input class="form-control" type="text"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="form-group row"&gt;
+                &lt;div class="col-lg-12 text-right"&gt;
+                   &lt;input type="button" class="btn btn-primary" value="Submit"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+                </code></pre>
+                
+                <p class="lead">Jumbotron</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;div class="jumbotron py-4"&gt;
+            &lt;h1 class="display-3"&gt;Hello, world!&lt;/h1&gt;
+            &lt;p class="lead"&gt;
+            This is simple jumbotron component...
+            &lt;/p&gt;
+        &lt;/div&gt;
+                </code></pre>
+                
+                <p class="lead">Pagination</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;nav&gt;
+          &lt;ul class="pagination"&gt;
+            &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/nav&gt;
+                </code></pre>
+                
+                <p class="lead">Progress</p>
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;div class="progress"&gt;
+          &lt;div class="progress-bar w-25"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+                </code></pre>
+                
+                <hr class="my-5">
+                
+                <h4>What's the correct HTML markup & structure to use?</h4>
+                
+                <p class="lead">This is where developing with Bootstrap does require some “leg work”. You do need to know and use 
+                the correct HTML structure when utilizing any of the Bootstrap Components.</p>
+
+                <p class="lead">When using Components like the Button (.btn .btn-primary) shown earlier, the HTML markup is straight-forward.
+                But, for other Components like the <a href="http://getbootstrap.com/docs/4.1/components/navbar/">Navbar</a>, 
+                <a href="http://getbootstrap.com/docs/4.1/components/modal/">Modal</a> or <a href="http://getbootstrap.com/docs/4.1/components/carousel/">Carousel</a>, 
+                determining the correct HTML structure is more complex, 
+                and will vary according to use-case and the desired implementation.</p>
+
+                <p class="lead">When using these more complex Bootstrap Components, you must start with examples. The best resource is the 
+                <a href="http://getbootstrap.com">Official Bootstrap Documentation</a>. The docs have many examples, and a “How it Works” section for each Component.</p>
+
+                <p class="lead">There are also tools like <a href="http://www.codeply.com">Codeply</a> (that’s the one I wrote), and 
+                <a href="http://bootstrap.build">Bootstrap.build</a> that include example 
+                Bootstrap code snippets that you can easily drop in an editor and play around with. For example, here’s the Navbar picked 
+                from the Codeply’s Bootstrap 4 Components list…</p>
+                
+                <img src="./assets/howto/codeply.png" class="d-block img-fluid mx-auto my-4" alt="Find Bootstrap 4 element stucture on Codeply">
+                
+                <hr class="my-5 border-dark">
+                
+                <h3>The Navbar</h3>
+                
+                <p class="lead">
+                While most of the Bootstrap Components shown above are self-explanatory, I think the Navbar requires a full explanation. 
+                Along with the Grid, the Navbar is one of the most popular Bootstrap Components.</p>
+                
+                <h5>Content, Structure and Alignment</h5>
+
+                <p class="lead"><em>Only</em> use supported content inside the Navbar. The Navbar can contain:</p>
+                
+                <ul>
+                <li>Logo/brand</li>
+                <li>Nav links, buttons, or dropdowns</li>
+                <li>Inline forms</li>
+                <li>Text</li>
+                </ul>
+                
+                <p class="lead">
+                Don’t use Grid Rows/Columns inside the Navbar. There’s really no reason to since Utility classes can be used to align Navbar 
+                content. For example, here the <code>ml-auto</code> (left auto margin) class is used to align the 2nd Nav to the right:</p>
+                
+                <pre class="bg-dark text-white rounded">
+                <code>
+        &lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+          &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+          &lt;button class="navbar-toggler" 
+             data-toggle="collapse" 
+             data-target="#nb"&gt;
+             &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+         &lt;/button&gt;
+         &lt;div id="nb" class="navbar-collapse collapse"&gt;
+           &lt;ul class="navbar-nav"&gt;
+             &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#"&gt;Left aligned&lt;/a&gt;
+             &lt;/li&gt;
+           &lt;/ul&gt;
+           &lt;ul class="navbar-nav ml-auto"&gt;
+             &lt;li class="nav-item"&gt;
+              &lt;a class="nav-link" href="#"&gt;Right aligned&lt;/a&gt;
+             &lt;/li&gt;
+          &lt;/ul&gt;
+         &lt;/div&gt;
+        &lt;/nav&gt;
+                </code></pre>
+                                
+                <h5>Navbar Breakpoints</h5>
+
+                <p class="lead">
+                By default, the Navbar is designed for smaller screen widths on Mobile devices. Therefore the Navbar will stack vertically in a column, 
+                unless overridden with a “expand” class make the Navbar to remain horizontal above specified breakpoint widths. There are 5 breakpoints… 
+                </p>
+                
+                <ul class="my-4">
+                <li><code>navbar-expand</code> = always expanded (remains horizontal)</li>
+                <li><code>navbar-expand-sm</code> = expands on sm widths > 576px</li>
+                <li><code>navbar-expand-md</code> = expands on md widths > 768px</li>
+                <li><code>navbar-expand-lg</code> = expands on lg widths > 992px</li>
+                <li><code>navbar-expand-xl</code> = expands on xl widths > 1200px</li>
+                </ul>
+                
+                <a class="d-block my-3" href="http://www.codeply.com/go/imngr08QRi" target="_new" title="See the different Navbar breakpoints">Try it on Codeply</a>
+
+                <h5>Light or Dark Background Color?</h5>
+                
+                <p class="lead">
+                The Navbar uses the navbar-light and navbar-dark classes to determine the foreground colors of the brand, 
+                links and toggler (hamburger) icon. Make sure you use the appropriate classes to make the Navbar content display.</p>
+                
+                <ul class="my-4">
+                <li>Use <code>navbar-dark</code> to for darker colored backgrounds</li>
+                <li>Use <code>navbar-light</code> to for lighter colored backgrounds</li>
+                </ul>
+                
+                <p class="lead">
+                To give the Navbar a background color, use one of the contextual colors (e.g. bg-primary) otherwise 
+                the Navbar is transparent.</p>
+                
+                <h5 class="text-right"><a href="https://medium.com/wdstack/bootstrap-4-custom-navbar-1f6a2da5ed3c" target="_new">Read more about the Bootstrap 4 Navbar</a></h5>
+                
+                <hr class="my-5 border-dark">
+
+                <h3>Utility Classes</h3>
+                
+                <p class="lead">
+                    Of course, Bootstrap is the Swiss army knife of the Web design & development world. Bootstrap encompasses many widely 
+                    used CSS properties in <a href="http://getbootstrap.com/docs/4.1/utilities" target="_new">handy Utility classes</a>. This eliminates the need to write the same CSS over-and-over again to apply styles to different HTML elements. 
+                    You many know it as <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_new">D.R.Y.</a>
+                </p>
+                
+                <p class="lead">
+                So instead of writing this…
+                </p>
+                
+                <pre class="bg-dark text-white rounded my-3">
+                <code>
+        &lt;style&gt;#mydiv { text-alignment: center }&lt;/style&gt;
+        &lt;div id="mydiv" class="text-center">Centered text&lt;/div&gt;
+                </code></pre>
+                
+                <p class="lead">
+                You simply utilize Bootstrap’s <code>text-center</code> alignment class wherever it’s needed…
+                </p>
+                
+                <pre class="bg-dark text-white rounded my-3">
+                <code>
+        &lt;div id="mydiv" class="text-center"&gt;Centered text&lt;/div&gt;
+                </code></pre>
+                
+                <hr class="my-5">
+                
+                <p class="lead">Remember, the most up-to-date Bootstrap resource is the 
+                <a href="http://getbootstrap.com">Official Bootstrap Documentation</a>. 
+                The docs have many examples, and a “How it Works” section for each Component.</p>
+                
+                <h3>
+                    Now that you understand the basics of using Bootstrap’s styling Components, next I will explain Bootstrap’s powerful, 
+                    responsive Layout Component__ the Grid System.
+                </h3>
+                
+                                
+                </div>
+                <div class="col-sm-10 mx-auto mt-5 py-4 border-top">
+                    <div class="row">
+                        <div class="col-sm mr-auto">
+                            <a href="bootstrap-getting-started.html">Prev: How to Get Started with Bootstrap</a>
+                        </div>
+                        <div class="col-sm-auto text-right">
+                            <a href="how-to-use-bootstrap-grid.html">Next: How to Use the Bootstrap Grid</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <h3 class="text-center">How can we help you?</h3>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" role="form" method="post">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-md-2 form-control-label">Email</label>
+                            <div class="col-md-12">
+                                <input type="email" class="form-control" id="inputEmail" name="contactEmail" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="col-md-2 form-control-label">Message</label>
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="inputMessage" rows="6" name="contactMessage"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xl-12">
+                                <button type="submit" id="contactBtn" class="btn btn-primary btn-lg mx-auto">Send it</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalThanks" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block text-center">
+                    <h3>Thank you!</h3>
+                    <h6>We'll be in touch</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ./partials/footer %>
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  </body>
+</html>

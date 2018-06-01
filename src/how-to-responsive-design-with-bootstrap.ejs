@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Responsive Design with Bootstrap</title>
+    <link meta="description" content="Learn how to create responsive design and layouts using the Bootstrap grid">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta property="og:image" name="twitter:image" content="http://themes.guide/favicon-1024.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ThemesGuide">
+    <meta name="twitter:creator" content="@ThemesGuide">
+    <meta name="twitter:title" content="Responsive Design with Bootstrap">
+    <meta name="twitter:description" content="Learn how to create responsive design and layouts using Bootstrap">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-103606808-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="https://www.codeply.com/js/embed.js"></script>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".fixed-top" data-offset="60">
+    <% include ./partials/nav %> 
+    <div class="container pt-5">
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <% include ./partials/htb %>
+            </div>
+            <div class="col-md-12 pt-5 text-center">
+                <h1 class="font-weight-light">How to Responsive Design with Bootstrap </h1>
+            </div>
+        </div>
+    </div>
+    
+    <section id="howto">
+        <div class="container">
+            <div class="row mb-3">
+                <div class="col-sm-10 mx-auto">
+                    
+                    <h3 class="pb-5 text-justify">
+                    The Rows & Columns of the <a href="how-to-use-bootstrap-grid.html">Bootstrap Grid</a> are the "star of the show" when it comes to Responsive Design. I will tell you all about
+                    Grid tiers, media queries and breakpoints in Bootstrap 4. It’s all about width.
+                    
+                    </h3>
+                    
+                    <p class="lead">
+                    Bootstrap 4 has 5 Responsive Tiers (a.k.a. “Breakpoints”) that you may have noticed in 
+                    some of the previous Column examples (ie; col-lg-4, col-md).
+                    </p>
+                    
+                    <p class="lead font-weight-bold">Bootstap 4 Responsive Breakpoints (based on screen width):</p>
+                    
+                    <ul>
+                    <li>(xs) — screen width < 576px (This is the “default” tier)</li>
+                    <li>sm — screen width ≥ 576px</li>
+                    <li>md — screen width ≥ 768px</li>
+                    <li>lg — screen width ≥ 992px</li>
+                    <li>xl — screen width ≥ 1200px</li>
+                    </ul>
+                    
+                    <div class="card">
+                        <div class="card-body">
+                        <strong>Why did I put (xs) in parenthesis, and not the other breakpoints?</strong> Since xs (extra-small) is the default 
+                        breakpoint, the <code>-xs</code> infix that  was used for Bootstrap 3.x is longer used in Bootstrap 4.x. So instead of 
+                        using <code>col-xs-6</code>, it’s simply <code>col-6</code>.
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <p class="lead">
+                    Bootstrap uses CSS media queries to establish these Responsive Breakpoints. They enable you to control Column behavior at different screen widths.</p>
+
+                    <p class="lead">
+                    <em>For example</em>: here are 2 columns, each 50% width:</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="container"&gt;
+           &lt;div class="row"&gt;
+              &lt;div class="col-sm-6"&gt;Column 1&lt;/div&gt;
+              &lt;div class="col-sm-6"&gt;Column 2&lt;/div&gt;
+           &lt;/div&gt;
+        &lt;/div&gt;
+                    </pre>
+                    
+                    <p class="lead">
+                    The col-sm-6 means use 6 of 12 columns wide (50%), on a typical small device width (greater than or equal to 768 px):</p>
+                    
+                    <img src="./assets/howto/cols15.png" class="d-block img-fluid mx-auto my-4" alt="Grid 1">
+                    
+                    
+                    <p class="lead">
+                    On <b>less than 768px</b>, the 2 columns become 100% width and stack vertically:</p>
+                    
+                    <img src="./assets/howto/cols16.png" class="d-block img-fluid mx-auto my-4" alt="Grid 2">
+                    
+                    <p class="lead">
+                    This is because (xs) is the default or implied breakpoint. Since I didn’t specify a default Column width, the 50% width was only applied on 768px and wider for the sm breakpoint.</p>
+
+                    <h3Mobile-first!></h3>
+                    <p class="lead">Since (xs) is the default breakpoint, the col-12 is implied. So, this:</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="col-12 col-sm-6"&gt;Column&lt;/div&gt;</pre>
+                    
+                    <p class="lead">
+                    Is effectively the same as this:</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="col-sm-6"&gt;Column&lt;/div&gt;</pre>
+                    
+                    <p class="lead font-weight-bold">
+                    Larger breakpoints, override Smaller breakpoints.</p>
+                    
+                    <code>xs</code> (default) > <br>
+                    overridden by <code>sm</code> > <br>
+                    overridden by <code>md</code> > <br>
+                    overridden by <code>lg</code> > <br>
+                    overridden by <code>xl</code><br><br>
+
+                    <p class="lead">
+                    Or, in reverse…</p>
+                    <code>xl</code> > overrides <code>lg</code> > overrides <code>md</code> > overrides <code>sm</code> > overrides (xs)
+                    
+                    <p class="lead">
+                    Therefore, <code>col-sm-6</code> really means 50% width on small-and-up. For the same column width on all tiers, just set the width for the smallest tier that’s desired. <em>For example</em>:</p>
+                    
+                    
+                    <p class="lead"><em>For example</em>:</p>
+                    
+                    <p>
+                    <code> &lt;div class="col-lg-3 col-md-3 col-sm-3"&gt;..&lt;/div&gt; </code> is the same as, <code> &lt;div class="col-sm-3"&gt;..&lt;/div&gt; </code>
+                    </p>
+                    
+                    <p class="lead">
+                    For a different column width on a larger tier, use the appropriate larger breakpoint to override the smaller breakpoint. 
+                    For example, 3 columns wide on sm, and 4 columns wide on <b>md-and-up:</b></p>
+                    
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="col-sm-3 col-md-4"&gt;..&lt;/div&gt;</pre>
+                    
+                    <p class="lead">
+                    The Bootstrap 4 <a target="_new" href="http://getbootstrap.com/docs/4.1/layout/grid/#auto-layout-columns">auto-layout</a> columns also work responsively. Because of their simplicity, I prefer them over the classic 12-unit columns. 
+                    The auto-layout columns are perfect for any layout scenarios where equal-width columns are required. But, don’t forget, the 12-unit columns can be mixed-in as needed.</p>
+
+                    <p class="lead font-weight-bold">
+                    Take a look at a few auto-layout Grid examples…</p>
+                    
+                    <p class="lead">
+                    3 equal-width columns. The `cols` remain horizontal at all widths, and don’t stack vertically because the xs breakpoint is the default:</p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="container"&gt; 
+           &lt;div class="row"&gt; 
+              &lt;div class="col"&gt;1&lt;/div&gt;
+              &lt;div class="col"&gt;2&lt;/div&gt; 
+              &lt;div class="col"&gt;3&lt;/div&gt;
+           &lt;/div&gt; 
+        &lt;/div&gt;</pre>
+                    
+                    <p class="lead">
+                        3 equal-width columns (responsive). In this example, the `cols` remain horizontal until the <code>sm</code> breakpoint of 576px, and then stack vertically:
+                    </p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="container"&gt; 
+           &lt;div class="row"&gt; 
+              &lt;div class="col-sm"&gt;1&lt;/div&gt;
+              &lt;div class="col-sm"&gt;2&lt;/div&gt; 
+              &lt;div class="col-sm"&gt;3&lt;/div&gt;
+           &lt;/div&gt; 
+        &lt;/div&gt;</pre>
+                    
+                    <p class="lead">
+                        Remember, you can switch out sm for whatever breakpoint (md,lg,xl) is needed.
+                    </p>
+                    
+                    <p class="lead">
+                        2 columns, left sidebar & right. Here’s an example of combining the classic defined-width columns, 
+                        with the auto-layout columns. The right column will automatically grow to fill the width. 
+                        The sidebar will stack on top at the sm breakpoint of 576px:
+                    </p>
+                    
+                    <pre class="bg-dark text-white rounded mb-5">
+        &lt;div class="container"&gt; 
+           &lt;div class="row"&gt; 
+              &lt;div class="col-sm-2"&gt;sidebar&lt;/div&gt;
+              &lt;div class="col"&gt;main&lt;/div&gt; 
+           &lt;/div&gt; 
+        &lt;/div&gt;</pre>
+        
+                    <hr>
+                    
+                    <h3>Key points on Responsive Design using the Grid:</h3>
+                        
+                    <p class="lead">
+                    Columns will stack vertically (and become full-width) at the smaller screen widths unless you use a 
+                    specific <code>col-*</code> class in your HTML markup. Use a specific <code>col-*</code> to prevent that vertical stacking.</p>
+                    
+                    <p class="lead">
+                    The smaller grid classes also apply to larger screens unless overridden specifically for larger screen width. 
+                    So, <code>&lt;div class="col-md-6"&gt;&lt;/div&gt;</code> is effectively the same as <code>&lt;div class="col-md-6 col-lg-6"&gt;&lt;/div&gt;</code>. 
+                    Therefore, you only need to use the class for the smallest width you want to support.</p>
+                    
+                    <p class="lead">
+                    Rows are <code>display:flex</code>, and therefore Columns are equal height in the same row. Use auto-margins or Flexbox align-items and 
+                    justify-content for horizontal or vertical alignment (centering, bottom, right, etc..).
+                    </p>
+                    
+                </div>
+                <div class="col-sm-10 mx-auto mt-5 py-4 border-top">
+                    <div class="row">
+                        <div class="col-sm mr-auto">
+                            <a href="how-to-use-bootstrap-grid.html">Prev: How to Use the Bootstrap Grid</a>
+                        </div>
+                        <div class="col-sm-auto text-right">
+                            <a href="how-to-use-bootstrap-javascript.html">Next: How to Use Bootstrap JavaScript</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="modalContact" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <h3 class="text-center">How can we help you?</h3>
+                </div>
+                <div class="modal-body">
+                    <form id="contactForm" role="form" method="post">
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-md-2 form-control-label">Email</label>
+                            <div class="col-md-12">
+                                <input type="email" class="form-control" id="inputEmail" name="contactEmail" required="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputMessage" class="col-md-2 form-control-label">Message</label>
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="inputMessage" rows="6" name="contactMessage"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xl-12">
+                                <button type="submit" id="contactBtn" class="btn btn-primary btn-lg mx-auto">Send it</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalThanks" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-block text-center">
+                    <h3>Thank you!</h3>
+                    <h6>We'll be in touch</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include ./partials/footer %>
+    <!--scripts loaded here-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  </body>
+</html>

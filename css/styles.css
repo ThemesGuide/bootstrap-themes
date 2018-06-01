@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Autour+One:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Codystar:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Corben:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Courgette:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Crete+Round:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Galada:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Rokkitt:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Vast+Shadow:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Voltaire:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Zilla+Slab+Highlight:300,400,700');
+
+html, body {
+    height: 100%;
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    color: #222;
+    background-color: #fff;
+}
+
+h1,.h1 {
+    font-family: 'Courgette', sans-serif;
+}
+
+h2,h3,h4,h5,h6,
+.h2,.h3,.h4 {
+    font-family: 'Muli', sans-serif;
+}
+
+hr {
+    border-color: rgba(255,255,255,0.7);
+}
+
+a {
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    color: #777;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+    outline: 0;
+    opacity: 0.9;
+    color: #bbb;
+}
+
+p > a {
+    color: #444;
+    border-bottom: #444 1px dotted;
+}
+
+.color {
+    color: #777;
+}
+
+.color-alt {
+    background-color: #e7e7e7;
+}
+
+footer {
+    border-top: 1px solid #f3f3f3;
+    padding: 40px 0;
+}
+
+/* for anchor offsets */
+section:before {
+    height: 56px;
+    content: "";
+    display:block;
+}
+section {
+    position: relative;
+    padding: 45px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+@media(max-width:768px) {
+    section {
+        padding: 70px 0;
+    }
+}
+
+.list-inline>li {
+    padding-bottom: 10px;
+}
+
+/* NavBar */
+.navbar-custom {
+    margin-bottom: 0;
+    border-bottom: 0;
+    text-transform: uppercase;
+    background-color: rgba(#007bff);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#007bff, endColorstr=#663399);
+    background-image: -moz-linear-gradient(left bottom, #007bff 10%, #663399 100%);
+    background-image: -webkit-linear-gradient(left bottom, #007bff 10%, #663399 100%);
+    background-image: -ms-linear-gradient(left bottom, #007bff 10%, #663399 100%);
+    background-image: linear-gradient(left bottom, #007bff 10%, #663399 100%);
+    background-image: -o-linear-gradient(left bottom, #007bff 10%, #663399 100%);
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(10%,#007bff), color-stop(100%,#663399));
+}
+
+.navbar-custom.navbar a {
+    -webkit-transition: background .4s ease-in-out;
+    -moz-transition: background .4s ease-in-out;
+    transition: background .4s ease-in-out;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+}
+.navbar-custom .nav li a:hover {
+    color: rgba(255,255,255,.8);
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        padding: 15px;
+        border-bottom: 0;
+    }
+    .navbar-custom.top-nav-collapse {
+        padding: 10px 15px;
+    }
+}
+
+/* Intro */
+.intro {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    background-color: #007bff;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#007bff, endColorstr=#663399);
+    background-image: -moz-linear-gradient(left bottom, #007bff 0%, #663399 100%);
+    background-image: -webkit-linear-gradient(left bottom, #007bff 0%, #663399 100%);
+    background-image: -ms-linear-gradient(left bottom, #007bff 0%, #663399 100%);
+    background-image: linear-gradient(left bottom, #007bff 0%, #663399 100%);
+    background-image: -o-linear-gradient(left bottom, #007bff 0%, #663399 100%);
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#007bff), color-stop(100%,#663399));
+}
+
+.intro:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    width: 2000px;
+    height: 100%;
+    background-image: url(https://www.codeply.com/images/lines-illustration-976f9037.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    content: "";
+    transform: translateX(-50%);
+    opacity: 0.4;
+}
+.intro-body {
+    z-index:3;
+}
+
+.op-2 {
+    opacity:0.1;
+}
