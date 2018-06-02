@@ -27,7 +27,10 @@
 		    "headings":"Oswald",
 		    "base":"Muli"
 		  },
-	      "desc": "Shades of gray featuring sea green.",
+		  "vars": {
+			"enable-rounded": false
+		  },
+	      "desc": "Square corners with shades of gray and sea green.",
 	      "colors": {
 	        "primary": "#2f3c48",
 	        "secondary": "#6f7f8c",

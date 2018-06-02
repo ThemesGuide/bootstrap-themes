@@ -13,6 +13,12 @@ $info:#5c8f94;
 $warning:#6e9fa5;
 $light:#eceeec;
 $dark:#1e2b37;
+
+/*! Import Bootstrap 4 variables */
+@import "functions";
+@import "variables";
+
+$enable-rounded:false;
 @import "bootstrap";
 
 // Add SASS theme customizations here..
