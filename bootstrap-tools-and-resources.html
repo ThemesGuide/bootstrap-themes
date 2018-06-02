@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Create Bootstrap Themes</title>
-    <link meta="description" content="How to customize Bootstrap and create custom themes">
+    <title>Helpful Bootstrap Tools and Resources</title>
+    <link meta="description" content="A collection of the most useful Bootstrap 4 resources">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
@@ -16,8 +16,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@ThemesGuide">
     <meta name="twitter:creator" content="@ThemesGuide">
-    <meta name="twitter:title" content="Create Bootstrap 4 Themes">
-    <meta name="twitter:description" content="Learn how to create custom themes for Bootstrap 4">
+    <meta name="twitter:title" content="Bootstrap Tools and Resources">
+    <meta name="twitter:description" content="Learn how to use Bootstrap 4">
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -58,7 +58,7 @@
                 </h4>
             </div>
             <div class="col-md-12 pt-5 text-center">
-                <h1 class="font-weight-light">How to Create Bootstrap Themes</h1>
+                <h1 class="font-weight-light">Helpful Bootstrap Tools &amp; Resources</h1>
             </div>
         </div>
     </div>
@@ -68,128 +68,55 @@
             <div class="row mb-3">
                 <div class="col-sm-10 mx-auto">
                     
-                    <h3>Colors</h3>
-                    
                     <p class="lead">
-                    When it comes to customizing the default Bootstrap look, changing the color palette is the first thing that comes to mind.
-                    The standard color palette hasn’t changed much in 3 iterations of Bootstrap, and the latest Bootstrap 4 is no different.</p>
-                    
-                    <p class="lead">The colors are also easily customized by setting the appropriate SASS variables that are used to generate the Bootstrap theme-colors:</p>
-                    
-                    <pre class="bg-dark text-white rounded mb-5">
-                        
-        $primary: #1633ff;
-        $secondary: #a0b7bc;
-        $success: #1633ff;
-        $danger: #00f900;
-        $info: #7ebcfa;
-        $warning: #00f900;
-        $light: #eef0f2;
-        $dark: #000633;
-                    </pre>
-                    
-                    <p class="lead">
-                    For Bootstrap theming, dealing with “Light” and “Dark” colors can be tricky because color contrast needs to be considered. 
-                    Light and dark contrast well with each other and make text easier to read.
-                    </p>
-                    
-                    <img src="./assets/howto/buttons.png" class="d-block img-fluid mx-auto my-4" alt="Bootstrap theme colors">
-                    
-                    <h3 class="mt-5">Fonts</h3>
-                    
-                    <p class="lead">
-                    Fonts are obviously another huge factor in making all Bootstrap sites look the same. Bootstrap 4’s native font stack is as follows:
-                    </p>
-                    
-                    <pre class="bg-dark text-white rounded mb-5">
-                        
-          // Safari for OS X and iOS (San Francisco)
-          -apple-system,
-          // Chrome < 56 for OS X (San Francisco)
-          BlinkMacSystemFont,
-          // Windows
-          "Segoe UI",
-          // Android
-          "Roboto",
-          // Basic web fallback
-          "Helvetica Neue", Arial, sans-serif,</pre>
-          
-                    <p class="lead">
-                    Consider using one the many <a href="https://fonts.google.com/" target="_new">Google Fonts</a> for the Bootstrap theme. The custom font can be set as the “base” font family ($font-family-base) for the entire theme. 
-                    But, in most cases you’ll only want the custom font applied to headings ($headings-font-family), and keep the very readable default fonts for smaller text.
-                    </p>
-                    
-                    <pre class="bg-dark text-white rounded">
-                        
-            @import url(https://fonts.googleapis.com/css?family=Nunito:200,300,400,700);
-            $headings-font-family:Nunito;
-            
-                    </pre>
-                    
-                    <p>
-                    Note: For better performance reference the Fonts using a LINK tag in the HEAD if the HTML, instead of @import in the CSS.</p>
-                    
-                    
-                    <h3 class="mt-5">SASS Variables</h3>
-                    
-                    <p class="lead">
-                    To know Bootstrap, is to know that there are a ton of SASS variables. Changing these variables is the very core of <a href="how-to-customize-bootstrap.html">Bootstrap customization</a>. 
+                    Here are the Bootstrap tools mentioned in the article. You’ll want to bookmark this list of must-have Bootstrap resources.
                     </p>
 
-                    <pre class="bg-dark text-white rounded mb-5">
-                        
-            $enable-grid-classes:false;
-            
-            /*! Import Bootstrap 4 variables */
-            @import "bootstrap/functions";
-            @import "bootstrap/variables";
-            
-            $body-bg:#ffffff;
-            $display1-weight:600;
-            $display2-weight:600;
-            $display3-weight:600;
-            $btn-border-radius:1.3rem;
-            $btn-border-radius-lg:1.6rem;
-            $btn-border-radius-sm:.8rem;
-            @import "bootstrap";
-            
-            // Add more SASS theme customizations here..
-                    </pre>
-
-                    <h3 class="mt-5">Tools</h3>
-
-                    <p class="lead">
-                        To make creating custom Bootstrap themes easier, I built <a href="//whootstrap.themes.guide">Whootstrap__</a> a custom theme builder for Bootstrap 4. If 
-                        you want to create your own Bootstrap themes, but don’t know SASS, try it. Even if you don’t have any experience with SASS, you can use 
-                        <a href="//whootstrap.themes.guide">Whootstrap</a> to easily generate the CSS for your custom theme.
-                    </p>
-
-                    <p class="lead">
-                    The whole idea of <a href="//whootstrap.themes.guide" rel="nofollow" target="_new">Whootstrap</a> is to make the Bootstrap customization process easier, and allow you to visualize changes along the way. It includes 
-                    starter themes to instantly give your projects <b>a unique, “non-Bootstrap” look</b>. You can change the fonts, colors and many other custom variables based on 
-                    Bootstrap SASS. When you’re done, download the custom SASS, or the complete CSS for the new generated theme. 
-                    If you choose to use the <a href="how-to-customize-bootstrap.html">SASS customization method described before</a>, 
-                    what Whootstrap produces is the custom.scss with all of the appropriate variable customizations.
-                    </p>
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Official Bootstrap Documentation</a>
+                    </h5>
                     
-                    <h3 class="mt-5">Start Theming</h3>
-
-                    <p class="lead">
-                    To get started creating custom themes for Bootstrap 4, all of our <a href="./#themes">free, open source themes</a> are integrated with the 
-                    <a href="//whootstrap.themes.guide" rel="nofollow" target="_new">Whootstrap</a> theme builder. This allows you start customizing from the 
-                    standard Bootstrap theme, <em>or</em> using one of our themes with custom color palette and fonts. In context of Whootstrap, “theme” refers to 
-                    the style layer or “skin”. The “Theme” encompasses colors, fonts and style. A “template” refers to a page layout and its’ HTML structure.
-                    </p>
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Codeply Bootstrap 4</a>
+                    </h5>
                     
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Bootstrap CDN</a>
+                    </h5>
+                    
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Whootstrap</a>
+                    </h5>
+                    
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Bootstrap.build</a>
+                    </h5>
+                    
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Bootstrap 4 Cheatsheet</a>
+                    </h5>
+                    
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Bootstrap 4 on WDStack</a>
+                    </h5>
+                    
+                    <h5>
+                    <a href="http://getbootstrap.com" target="_new" rel="nofollow">Top 10 Bootstrap 4 Answers</a>
+                    </h5>
+                    
+                    <p class="lead">
+                    There are many other Bootstrap resources out there, but the ones I’ve listed above are the most useful, maintained and up-to-date. 
+                    Beware: Many Bootstrap 4 tutorials and articles, like those on ⛔W3schools, are full of misinformation and poor guidance..
+                    </p>
                     
                 </div>
                 <div class="col-sm-10 mx-auto mt-5 py-4 border-top">
                     <div class="row">
                         <div class="col-sm mr-auto">
-                            <a href="how-to-customize-bootstrap.html">Prev: How to Customize Bootstrap</a>
+                            <a href="how-to-create-bootstrap-themes.html">Prev: How to Create Bootstrap Themes</a>
                         </div>
                         <div class="col-sm-auto text-right">
-                            <a href="bootstrap-tools-and-resources.html">Next: Helpful Tools &amp; Resources</a>
+                            <a href="how-to.html">Home: How-to... Bootstrap</a>
                         </div>
                     </div>
                 </div>
