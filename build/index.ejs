@@ -40,17 +40,19 @@
                             </div>
                         </div>
                         <p class="lead">
-                            https://themesguide.github.io/bootstrap-themes/
                             <div class="btn-group">
-                              <a href="theme.css" class="btn btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> btn-lg" type="button">
+                              <a href="theme.css" class="btn btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> btn-lg">
                                 Download Theme
                               </a>
                               <button type="button" class="btn btn-lg btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="sr-only">Downloads</span>
                               </button>
                               <div class="dropdown-menu">
-                                <a href="theme.css">theme.css</a>
-                                <a href="theme.scss">theme.scss</a>
+                                  <ul>
+                                      <li><a href="theme.css">theme.css</a></li>
+                                      <li><a href="theme.scss">theme.scss</a></li>
+                                      <li><a href="https://themesguide.github.io/bootstrap-themes/">GitHub</a></li>
+                                  </ul>
                               </div>
                             </div>
                         </p>
