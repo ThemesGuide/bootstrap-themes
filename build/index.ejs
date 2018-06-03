@@ -39,18 +39,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="btn-group mt-2 mx-auto">
-                              <a href="theme.css" class="btn btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> btn-lg">
-                                Download Theme
-                              </a>
-                              <button type="button" class="btn btn-lg btn-outline-<% if(helpers.brightness(helpers.hexToRGB(colors.primary))>140) { %>dark<% } else { %>light<% } %> dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="sr-only">Downloads</span>
-                              </button>
-                              <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="theme.css">theme.css</a>
-                                  <a class="dropdown-item" href="theme.scss">theme.scss</a>
-                              </div>
-                            </div>
+                        <div class="mt-2 mx-auto">
+                            <% include ./partials/download %> 
+                        </div>
                     </div>
                 </div>
             </div>
