@@ -1,0 +1,22 @@
+/*! Whootstrap `Boldstrap` Bootstrap 4.1.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Yantramanav:200,300,400,700);
+$headings-font-family:Yantramanav;
+
+$enable-grid-classes:false;
+$primary:#27a2fc;
+$secondary:#a0b7bc;
+$success:#37bd74;
+$danger:#e8286b;
+$info:#7ebcfa;
+$warning:#ff9b37;
+$light:#eef0f2;
+$dark:#3c4055;
+
+/*! Import Bootstrap 4 variables */
+@import "functions";
+@import "variables";
+
+$body-bg:#efefef;
+@import "bootstrap";
+
+// Add SASS theme customizations here..

@@ -1,0 +1,17 @@
+/*! Whootstrap `Hello Kiddie` Bootstrap 4.1.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300,400,700);
+$headings-font-family:Raleway;
+
+$enable-grid-classes:false;
+$primary:#f6648C;
+$secondary:#CACACA;
+$success:#035668;
+$danger:#FF444F;
+$info:#3F81C7;
+$warning:#0DE2EA;
+$light:#eAeAeA;
+$dark:#223322;
+@import "bootstrap";
+
+// Add SASS theme customizations here..
+html {font-size: 0.8rem;}@include media-breakpoint-up(sm) {html {font-size: .9rem;}}@include media-breakpoint-up(md) {html {font-size: 1rem;}}@include media-breakpoint-up(lg) {html {font-size: 1.1rem;}}

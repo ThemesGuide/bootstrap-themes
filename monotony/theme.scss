@@ -1,0 +1,18 @@
+/*! Whootstrap `Monotony` Bootstrap 4.1.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700);
+$font-family-base:Montserrat;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700);
+$headings-font-family:Open Sans;
+
+$enable-grid-classes:false;
+$primary:#222222;
+$secondary:#666666;
+$success:#333333;
+$danger:#434343;
+$info:#515151;
+$warning:#5f5f5f;
+$light:#eceeec;
+$dark:#111111;
+@import "bootstrap";
+
+// Add SASS theme customizations here..

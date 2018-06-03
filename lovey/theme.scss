@@ -1,0 +1,18 @@
+/*! Whootstrap `Lovey` Bootstrap 4.1.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Muli:200,300,400,700);
+$font-family-base:Muli;
+@import url(https://fonts.googleapis.com/css?family=Lato:200,300,400,700);
+$headings-font-family:Lato;
+
+$enable-grid-classes:false;
+$primary:#D80E70;
+$secondary:#dddddd;
+$success:#4EF037;
+$danger:#FA4659;
+$info:#00BBF0;
+$warning:#f4f133;
+$light:#eeeeee;
+$dark:#353535;
+@import "bootstrap";
+
+// Add SASS theme customizations here..

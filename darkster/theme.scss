@@ -1,0 +1,78 @@
+/*! Whootstrap `Darkster` Bootstrap 4.1.1 theme */
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:200,300,400,700);
+$headings-font-family:Comfortaa;
+
+$enable-grid-classes:false;
+$primary:#FF550B;
+$secondary:#303030;
+$success:#015668;
+$danger:#FF304F;
+$info:#0F81C7;
+$warning:#0DE2EA;
+$light:#e8e8e8;
+$dark:#000000;
+
+/*! Import Bootstrap 4 variables */
+@import "functions";
+@import "variables";
+
+$enable-shadows:true;
+$gray-300:#000000;
+$gray-800:#555555;
+$body-bg:$black;
+$body-color:#cccccc;
+$link-color:#f0f0f0;
+$link-hover-color:darken($link-color,20%);
+$font-size-base:1.1rem;
+$table-accent-bg: rgba($white,.05);
+$table-hover-bg:rgba($white,.075);
+$table-border-color:rgba($white, 0.3);
+$table-dark-border-color: $table-border-color;
+$table-dark-color:$white;
+$input-bg:$gray-300;
+$input-disabled-bg: #ccc;
+$dropdown-bg:$gray-800;
+$dropdown-divider-bg:rgba($black,.15);
+$dropdown-link-color:$body-color;
+$dropdown-link-hover-color:$white;
+$dropdown-link-hover-bg:$body-bg;
+$nav-tabs-border-color:rgba($white, 0.3);
+$nav-tabs-link-hover-border-color:$nav-tabs-border-color;
+$nav-tabs-link-active-bg:transparent;
+$nav-tabs-link-active-border-color:$nav-tabs-border-color;
+$navbar-dark-hover-color:$white;
+$navbar-light-hover-color:$gray-800;
+$navbar-light-active-color:$gray-800;
+$pagination-color:$white;
+$pagination-bg:transparent;
+$pagination-border-color:rgba($black, 0.6);
+$pagination-hover-color:$white;
+$pagination-hover-bg:transparent;
+$pagination-hover-border-color:rgba($black, 0.6);
+$pagination-active-bg:transparent;
+$pagination-active-border-color:rgba($black, 0.6);
+$pagination-disabled-bg:transparent;
+$pagination-disabled-border-color:rgba($black, 0.6);
+$jumbotron-bg:darken($gray-900, 5%);
+$card-border-color:rgba($black, 0.6);
+$card-cap-bg:lighten($gray-800, 10%);
+$card-bg:lighten($body-bg, 5%);
+$popover-bg:lighten($body-bg,5%);
+$modal-content-bg:lighten($body-bg,5%);
+$modal-header-border-color:rgba(0,0,0,.2);
+$progress-bg:darken($gray-900,5%);
+$progress-bar-color:$gray-600;
+$list-group-bg:lighten($body-bg,5%);
+$list-group-border-color:rgba($black,0.6);
+$list-group-hover-bg:lighten($body-bg,10%);
+$list-group-active-color:$white;
+$list-group-active-bg:$list-group-hover-bg;
+$list-group-active-border-color:$list-group-border-color;
+$list-group-disabled-color:$gray-800;
+$list-group-disabled-bg:$black;
+$list-group-action-color:$white;
+$breadcrumb-active-color:$gray-500;
+@import "bootstrap";
+
+// Add SASS theme customizations here..
+.navbar-dark.bg-primary {background-color:#111111 !important;}

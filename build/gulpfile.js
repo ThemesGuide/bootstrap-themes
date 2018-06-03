@@ -126,7 +126,7 @@ gulp.task('merge', ['sass'], function() {
         	.pipe(rename({extname:".html"}))
         	.pipe(gulp.dest(output+"/"+foldername+"/"));
         gulp.src("./*.css").pipe(gulp.dest(output+"/"+foldername+"/"));
-        gulp.src("./*.scss").pipe(gulp.dest(output+"/"+foldername+"/"));
+        gulp.src('../src/'+foldername+'/theme.scss').pipe(gulp.dest(output+"/"+foldername+"/"));
         gulp.src("./scripts.js").pipe(gulp.dest(output+"/"+foldername+"/"));
     }
     
