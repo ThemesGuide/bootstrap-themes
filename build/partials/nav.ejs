@@ -13,8 +13,9 @@
                         <div class="dropdown-menu" aria-labelledby="themesDd">
                             <% if (allThemes) {%>
                             <% for (t in allThemes) {%>
-                            <a class="dropdown-item px-2" href="../<%- allThemes[t].name.replace(" ","_").toLowerCase() %>"><%- allThemes[t].name %></a>
+                            <a class="dropdown-item px-2 <%if(name==allThemes[t].name){%>active<%}%>" href="../<%- allThemes[t].name.replace(" ","_").toLowerCase() %>"><%- allThemes[t].name %></a>
                             <% }} %>
+                            <a class="dropdown-item px-2" href="http://whootstrap.themes.guide">Build your own...</a>
                         </div>
                     </li>
                 </ul>
