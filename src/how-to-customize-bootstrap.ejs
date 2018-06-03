@@ -155,22 +155,22 @@
                                         
                     <p class="lead">
                     3. Build with SASS. The CSS output will contain the custom overrides! Don’t forget to check the includePaths if your @imports fail. 
-                    For a full list of variables you can override, see the variables.scss file. There are also these global variables.</p>
+                    For a full list of variables you can override, see the <code>variables.scss</code> file. There are also these global variables.</p>
                     
                     <p class="lead">
-                    Remember, with SASS you must @import “bootstrap” after the customizations in custom.scss to make them work! Once the SASS is compiled to 
+                    Remember, with SASS you must @import “bootstrap” after the customizations in <code>custom.scss</code> to make them work! Once the SASS is compiled to 
                     CSS (this is done using a server-side SASS compiler/processor), the resulting CSS is the customized Bootstrap.</p>
                     
                     <p class="lead font-weight-bold">In summary, here’s how the SASS customizations work:</p>
                     
                     <p class="lead">
-                    1_ First, when the custom.scss file is processed using SASS, the !default values defined in the bootstrap/variables.scss.</p>
+                    First, when the <code>custom</code>.scss file is processed using SASS, the <code>!default</code> values defined in the Bootstrap <code>variables.scss</code>.</p>
                     
                     <p class="lead">
-                    2_ Next, our custom values are set, which will override any of the variables that had !default values set in bootstrap/variables.scss.</p>
+                    Next, our custom values are set, which will override any of the variables that had <code>!default</code> values set in Bootstrap <code>variables.scss</code>.</p>
                     
                     <p class="lead">
-                    3_ Finally, Bootstrap is imported (@import "bootstrap") which enables the SASS processor (A.K.A. compiler) to generate all the appropriate CSS using both the Bootstrap defaults and the custom overrides. 
+                    Finally, Bootstrap is imported (<code>@import "bootstrap"</code>) which enables the SASS processor (A.K.A. compiler) to generate all the appropriate CSS using both the Bootstrap defaults and the custom overrides. 
                     </p>
                     
                     <h3>Customization is important since not everyone wants that overly recognizable Bootstrap look.</h3>
