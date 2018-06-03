@@ -6,8 +6,9 @@ create more custom Bootstrap themes.
 
 [Homepage and Demos](http://bootstrap.themes.guide)
 
-<http://themes.guide><br>
-<http://whootstrap.themes.guide>  
+<http://bootstrap.themes.guide><br>
+<http://whootstrap.themes.guide><br>
+<https://themesguide.github.io/bootstrap-themes/>
 
 ## Usage
 
