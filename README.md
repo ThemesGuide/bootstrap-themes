@@ -4,6 +4,8 @@ This project includes all the free, open source Bootstrap 4 themes as seen on [T
 You can also use the [Whootstrap](http://whootstrap.themes.guide) theme builder to easily 
 create more custom Bootstrap themes. 
 
+[Homepage and Demos](http://bootstrap.themes.guide)
+
 <http://themes.guide><br>
 <http://whootstrap.themes.guide>  
 
