@@ -99,173 +99,22 @@
     <section class="bg-light" id="themes">
         <div class="container">
             <div class="row">
-                <div class="col-12 py-3">
+                <div class="col-xl-6 py-3">
                     <h1 class="display-3 mb-0">Themes</h1>
                     <p class="lead text-justify">
-                        A collection of free themes to give your Bootstrap projects a <strong>unique, custom</strong> style. Simply download the <code>theme.css</code> file 
-                        for any theme, and include it after the standard <code>bootstrap.css</code> in your project's HTML templates. Each theme also includes 
+                        A collection of free, <a href="https://github.com/ThemesGuide/bootstrap-themes" target="_new">open-source</a> themes to give your Bootstrap 4 projects a 
+                        <strong>unique, custom</strong> style. Simply download the <code>theme.css</code> file for any theme, and include it after the standard 
+                        <code>bootstrap.css</code> in your project's HTML templates. Each theme also includes 
                         example layout templates to demonstrate Bootstrap 4 elements, components, and content integration.
                     </p>
                 </div>
             </div>
             <% for (t in themes) {%>
             <div class="row py-5 border-bottom">
-                <div class="col-md-5 py-2 text-center <% if(t%2==0){%>text-md-right<%}else{%>text-md-left<%}%>">
+                <div class="col-md-5 py-2 text-center <% if(t%2==1){%>text-md-right<%}else{%>text-md-left<%}%>">
                     <a href="./<%- themes[t].name.replace(" ","_").toLowerCase() %>"><img class="img-fluid rounded shadow wow fadeIn" src="./assets/ss_<%- themes[t].name.replace(" ","_").toLowerCase() %>.png" alt="Screenshot <%- themes[t].name %>"></a>
                 </div>
-                <div class="col-md-7 py-2 <% if(t%2==0){%>order-md-first text-md-right<%}%>">
-                    <h2 class="my-1"><a href="./<%- themes[t].name.replace(" ","_").toLowerCase() %>"><%- themes[t].name %></a></h2>
-                    <p>
-                        <%- themes[t].desc %><br>
-                        <% if (themes[t].images){ %>Also includes high-res image from Unsplash.<% } %>
-                    </p>
-                    <p><span class="h5" style="font-family:'<%- themes[t].fonts.headings %>'"><%- themes[t].fonts.headings %></span> is the font family.</p>
-                    <small class="text-muted">Color palette</small>
-                    <h5>
-                        <% for (c in themes[t].colors) {%>
-                        <span class="badge badge-pill" style="background-color:<%- themes[t].colors[c] %>;" title="<%- themes[t].colors[c] %>">&nbsp;</span>
-                        <% } %>
-                    </h5>
-                </div>
-            </div>
-            <% } %>
-            <div class="row py-5">
-                <div class="col-12 col-sm-10 mx-auto text-center">
-                    <h4>
-                    Want more themes like these?
-                    </h4>
-                    <p class="lead mb-3">It's easy to customize and build your own Bootstrap 4 themes
-                        at <a href="http://whootstrap.themes.guide">Whoot!strap</a>.</p>
-                    <a class="github-button" href="https://github.com/themesguide" data-size="large" aria-label="Follow @themesguide on GitHub">Follow</a>
-                    <a class="github-button" href="https://github.com/themesguide/bootstrap-themes/" data-icon="octicon-star" data-size="large" aria-label="Star themesguide/bootstrap-themes on GitHub">Star</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <% include ./partials/footer %> 
-    <!--scripts loaded here-->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-  </body>
-</html><!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 4 Themes by Themes.guide</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="http://themes.guide/favicon.ico" type="image/x-icon" />
-    <meta property="og:image" name="twitter:image" content="http://themes.guide/favicon-1024.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ThemesGuide">
-    <meta name="twitter:creator" content="@ThemesGuide">
-    <meta name="twitter:title" content="Bootstrap 4 Themes and Templates">
-    <meta name="twitter:description" content="Download free, open source Bootstrap 4 themes and templates by Themes.guide.">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-103606808-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'UA-103606808-1');
-    </script>
-
-  </head>
-  <body id="page-top" data-spy="scroll" data-target=".fixed-top" data-offset="60">
-    <% include ./partials/nav %> 
-    <section class="bg-primary text-white">
-        <div class="container py-5">
-            <div class="row my-3 text-center text-lg-left align-items-center">
-                <div class="col-xl-auto col-lg-6">
-                    <h1 class="display-3 mb-0">Bootstrap 4</h1>
-                    <h5 class="text-uppercase">Themes.guide</h5>
-                    <p class="mt-5 mx-auto">
-                        <a class="github-button" href="https://github.com/themesguide" data-size="large" aria-label="Follow @themesguide on GitHub">Follow</a>
-                        <a class="github-button" href="https://github.com/themesguide/bootstrap-themes" data-size="large" data-icon="octicon-star" aria-label="Star themesguide/bootstrap-themes on GitHub">Star</a><br>
-                    </p>
-                    <h1 class="h6">Free, Open Source Themes for <a class="text-white" href="http://getbootstrap.com">Bootstrap <%- bootstrapVersion %></a> + "How-to..."</h1>
-                </div>
-                <div class="col-xl-auto col-lg mr-auto">
-                    <svg class="i-download d-lg-none d-inline" title="For your downloading pleasure" viewBox="0 0 32 32" width="240" height="240" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5">
-                        <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16 L16 30"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="bg-white">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12 my-auto">
-                    <div class="row text-center">
-                        <div class="col-lg-4 mb-4">
-                            <div class="card h-100 border-0 shadow">
-                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="display-2"><a class="text-primary" href="how-to.html"><span class="ion ion-ios-bookmarks-outline"></span></a></h1>
-                                    <h4 class="card-title"><a class="text-primary" href="how-to.html">How-to</a></h4>
-                                    <p class="card-text">
-                                        Mystified? You're looking for our <strong>"<a class="text-primary" href="how-to.html">How to Bootstrap</a>"</strong> guide. This
-                                        essential guide explains <em>everything</em> from Getting Started &amp; the Grid, to Components, 
-                                        <a href="how-to-customize-bootstrap.html" class="text-primary">Customizing</a> &amp; <a href="how-to-create-bootstrap-themes.html" class="text-primary">Theming</a> Bootstrap. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card h-100 border-0 shadow">
-                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="display-2"><a class="text-primary" href="#themes"><span class="ion ion-ios-snow-outline"></span></a></h1>
-                                    <h4 class="card-title"><a class="text-primary" href="#themes">The Themes</a></h4>
-                                    <p class="card-text">
-                                        Don't want that typical Bootstrap look? Our <a class="text-primary" href="#themes">free themes</a> 
-                                        provide an additional lightweight style-layer
-                                        to give your standard Bootstrap 4 site a <strong>unique, custom look-and-feel</strong>.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 mb-4">
-                            <div class="card h-100 border-0 shadow">
-                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="display-2"><a class="text-primary" href="http://themes.guide#about"><span class="ion ion-ios-checkmark-circle-outline"></span></a></h1>
-                                    <h4 class="card-title"><a class="text-primary" href="http://themes.guide#about">The Details</a></h4>
-                                    <p class="card-text">Just like Bootstrap, each <a class="text-primary" href="#themes">theme</a> is crafted with care for design and performance. We build on modern HTML5 &amp; CSS3 
-                                    standards to ensure consistency and <strong>cross-browser</strong> support.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <section class="bg-light" id="themes">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 py-3">
-                    <h1 class="display-3 mb-0">Themes</h1>
-                    <p class="lead text-justify">
-                        A collection of free themes to give your Bootstrap projects a <strong>unique, custom</strong> style. Simply download the <code>theme.css</code> file 
-                        for any theme, and include it after the standard <code>bootstrap.css</code> in your project's HTML templates. Each theme also includes 
-                        example layout templates to demonstrate Bootstrap 4 elements, components, and content integration.
-                    </p>
-                </div>
-            </div>
-            <% for (t in themes) {%>
-            <div class="row py-5 border-bottom">
-                <div class="col-md-5 py-2 text-center <% if(t%2==0){%>text-md-right<%}else{%>text-md-left<%}%>">
-                    <a href="./<%- themes[t].name.replace(" ","_").toLowerCase() %>"><img class="img-fluid rounded shadow wow fadeIn" src="./assets/ss_<%- themes[t].name.replace(" ","_").toLowerCase() %>.png" alt="Screenshot <%- themes[t].name %>"></a>
-                </div>
-                <div class="col-md-7 py-2 <% if(t%2==0){%>order-md-first text-md-right<%}%>">
+                <div class="col-md-7 py-2 <% if(t%2==1){%>order-md-first text-md-right<%}%>">
                     <h2 class="my-1"><a href="./<%- themes[t].name.replace(" ","_").toLowerCase() %>"><%- themes[t].name %></a></h2>
                     <p>
                         <%- themes[t].desc %><br>
