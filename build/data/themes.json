@@ -109,7 +109,6 @@
 	        "card-border-color": "rgba($black, 0.6)",
 	        "card-cap-bg": "lighten($gray-800, 10%)",
 	        "card-bg": "lighten($body-bg, 5%)",
-	        "popover-bg": "lighten($body-bg,5%)",
 	        "modal-content-bg": "lighten($body-bg,5%)",
 	        "modal-header-border-color": "rgba(0,0,0,.2)",
 	        "progress-bg": "darken($gray-900,5%)",

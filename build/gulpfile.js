@@ -103,7 +103,8 @@ gulp.task('sass', ['themes'], function() {
         tasks.push(
             gulp.src('../src/'+theme+'/theme.scss')
                 .pipe(sass({
-                    includePaths: ['../node_modules/bootstrap/scss/','../node_modules/bootstrap/']
+                    includePaths: ['../node_modules/bootstrap/scss/','../node_modules/bootstrap/'],
+                    outputStyle: 'compressed'
                 }).on('error', function(e){console.log("sass error:"+e)}))
                 .pipe(concat('theme.css'))
                 .pipe(gulp.dest(output+'/'+theme+'/'))
