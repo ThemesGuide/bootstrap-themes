@@ -12,6 +12,8 @@ create more custom Bootstrap themes.
 <http://whootstrap.themes.guide><br>
 <https://themesguide.github.io/bootstrap-themes/>
 
+![Tequila Bootstrap 4 Theme](http://bootstrap.themes.guide/tequila/ss_tequila.png)
+
 ## Usage
 
 Clone this repository or download individual themes as desired. Each theme folder contains a `theme.css` file which is the 
