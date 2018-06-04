@@ -5,6 +5,7 @@ var ejs     = require("gulp-ejs");
 var sass    = require("gulp-sass");
 var rename  = require("gulp-rename");
 var fs      = require("fs");
+var cleanCSS = require('gulp-clean-css');
 var concat  = require('gulp-concat');
 var mergeStream = require('merge-stream');
 
@@ -99,12 +100,11 @@ gulp.task('sass', ['themes'], function() {
     var tasks = [];
     for (var t in themes) {
         var theme = themes[t];
-        console.log('Theme color:' + theme);
+        console.log('Theme:' + theme);
         tasks.push(
             gulp.src('../src/'+theme+'/theme.scss')
                 .pipe(sass({
-                    includePaths: ['../node_modules/bootstrap/scss/','../node_modules/bootstrap/'],
-                    outputStyle: 'compressed'
+                    includePaths: ['../node_modules/bootstrap/scss/','../node_modules/bootstrap/']
                 }).on('error', function(e){console.log("sass error:"+e)}))
                 .pipe(concat('theme.css'))
                 .pipe(gulp.dest(output+'/'+theme+'/'))
@@ -127,6 +127,9 @@ gulp.task('merge', ['sass'], function() {
         	.pipe(rename({extname:".html"}))
         	.pipe(gulp.dest(output+"/"+foldername+"/"));
         gulp.src("./*.css").pipe(gulp.dest(output+"/"+foldername+"/"));
+        // minify
+        gulp.src(output+"/"+foldername+"/theme.css").pipe(cleanCSS({compatibility:'ie9'})).pipe(rename({extname:".min.css"})).pipe(gulp.dest(output+"/"+foldername+"/"));
+        // copy scss
         gulp.src('../src/'+foldername+'/theme.scss').pipe(gulp.dest(output+"/"+foldername+"/"));
         gulp.src("./scripts.js").pipe(gulp.dest(output+"/"+foldername+"/"));
     }
