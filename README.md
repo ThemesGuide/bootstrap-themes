@@ -12,7 +12,7 @@ create more custom Bootstrap themes.
 <http://whootstrap.themes.guide><br>
 <https://themesguide.github.io/bootstrap-themes/>
 
-![Tequila Bootstrap 4 Theme](http://bootstrap.themes.guide/tequila/ss_tequila.png)
+![Tequila Bootstrap 4 Theme](http://bootstrap.themes.guide/assets/ss_tequila.png)
 
 ## Usage
 
