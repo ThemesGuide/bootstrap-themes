@@ -1,4 +1,6 @@
-# Bootstrap 4 Themes by ThemesGuide
+# Bootstrap ThemesGuide
+
+## Open source Bootstrap 4 themes + How-to guide
 
 This project includes all the free, open source Bootstrap 4 themes as seen on [ThemesGuide](http://themes.guide).
 You can also use the [Whootstrap](http://whootstrap.themes.guide) theme builder to easily 
