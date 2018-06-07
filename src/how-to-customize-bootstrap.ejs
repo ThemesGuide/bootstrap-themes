@@ -82,8 +82,26 @@
                     With this simple CSS change, the Cards, Buttons and Form Inputs now have square corners…</p>
                     
                     <p class="lead">
-                    Note: There’s no need to use !important in the custom CSS, unless you're overriding one of the Bootstrap Utility classes. CSS specificity always works for one CSS class to override another.</p>
+                    Note: There’s no need to use !important in the custom CSS, unless you're overriding one of the Bootstrap Utility classes. 
+                    CSS specificity always works for one CSS class to override another.</p>
                     
+                    <p class="lead">
+                    Using CSS overrides is feasible for simple Bootstrap customizations, but for more extensive changes, SASS is the recommended method. Suppose for 
+                    example you want to change the default blue "primary" color in Bootstrap to another color (eg. red). You can make a simple CSS override for the 
+                    <code>.btn-primary</code> button like this...
+                    </p>
+                
+                    <pre class="bg-dark text-white rounded mb-5">
+        .btn-primary {
+           background-color: red;
+        }</pre>
+                
+                    <p class="lead">
+                    This does work to make the <code>.btn-primary</code> button red, but it doesn't change the other btn-primary states like ":hover" and ":active". It also doesn't
+                    change the "primary" color throughout the CSS for <code>.alert-primary</code>, 
+                    <code>.text-primary</code>, <code>.bg-primary</code>, <code>.btn-outline-primary</code>, <code>.badge-primary</code>, etc...
+                    </p>
+                
                     <h3 class="mt-5">2. Customize using SASS</h3>
                     
                     <p class="lead">
