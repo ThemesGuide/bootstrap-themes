@@ -3,13 +3,13 @@
 ## Open source Bootstrap 4 themes + How-to guide
 
 This project includes all the free, open source Bootstrap 4 themes as seen on [ThemesGuide](http://themes.guide).
-You can also use the [Whootstrap](http://whootstrap.themes.guide) theme builder to easily 
+You can also use the [Themestr.app](https://themestr.app) theme builder to easily 
 create more custom Bootstrap themes. 
 
 [Homepage and Demos](http://bootstrap.themes.guide)
 
 <http://bootstrap.themes.guide><br>
-<http://whootstrap.themes.guide><br>
+<https://themestr.app><br>
 <https://themesguide.github.io/bootstrap-themes/>
 
 ![Tequila Bootstrap 4 Theme](http://bootstrap.themes.guide/assets/ss_tequila.png)

@@ -35,7 +35,7 @@ gulp.task('themes', function(cb) {
     for (var t in data.themes) {
         var theme = data.themes[t];
         var foldername = theme.name.toLowerCase().replace(" ","_");
-        var sassString = '/*! Whootstrap `'+ theme.name+'` Bootstrap '+bootstrapVersion+' theme */\n';
+        var sassString = '/*! Themestr.app `'+ theme.name+'` Bootstrap '+bootstrapVersion+' theme */\n';
         
         var colors = theme.colors;
         var variables = theme.vars;
@@ -114,7 +114,7 @@ gulp.task('sass', ['themes'], function() {
 });
 
 /* compile ejs to create html files */
-gulp.task('merge', ['sass'], function() {
+gulp.task('merge', ['themes','sass'], function() {
     var data = require('./data/themes.json');
     data.bootstrapVersion = bootstrapVersion;
     for (var t in data.themes) {
@@ -122,6 +122,7 @@ gulp.task('merge', ['sass'], function() {
         template.helpers = helpers;
         template.allThemes = data.themes;
         var foldername = template.name.toLowerCase().replace(" ","_");
+        console.log('Folder:' + foldername);
         gulp.src("./*.ejs")
           .pipe(ejs(template))
         	.pipe(rename({extname:".html"}))
