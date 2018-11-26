@@ -9,7 +9,7 @@ var cleanCSS = require('gulp-clean-css');
 var concat  = require('gulp-concat');
 var mergeStream = require('merge-stream');
 
-var bootstrapVersion = "4.1.1";
+var bootstrapVersion = "4.1.3";
 //var output = "../dist";
 var output = "../";
 
