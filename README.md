@@ -33,7 +33,7 @@ Additionally, each theme folder contains 3 example layout templates to get your 
 - template1.html
 - template2.html
 
-**All themes use the latest Bootstrap 4.1**
+**All themes use the latest Bootstrap 4.3.1**
 
 - Bootstrap: <https://github.com/twbs/bootstrap/>
 - Ionicons: <https://ionicframework.com/docs/ionicons/>
